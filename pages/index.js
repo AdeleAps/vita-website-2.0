@@ -1,5 +1,4 @@
 import Head from "next/head";
-import NavBar from "../components/shared/NavBar/NavBar";
 
 export default function Home() {
   return (
@@ -9,11 +8,7 @@ export default function Home() {
         <meta name="description" content="Psiholoģes Vitas Apsītes mājaslapa" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <NavBar />
-      </header>
-      <main>YOOOOOOO</main>
-
+      <main></main>
       <footer></footer>
     </div>
   );

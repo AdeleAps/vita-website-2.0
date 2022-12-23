@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600&display=swap');
+
 @font-face {
-  font-family: "League Spartan";
-  src: url("/fonts/LeagueSpartan-VariableFont_wght.ttf");
+  font-family: "Windsor Bold";
+  src: url("/fonts/Windsor-Bold/Windsor BOLD.ttf");
 }
 
 * {
   box-sizing: border-box;
-  font-family: "League Spartan", sans-serif;
-  font-size: 18px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  height: 100%;
+  font-family: $ft-jost;
+  color: $clr-black;
+  font-size: 62.5%;
+  background-color: $clr-cream-background;
 }
 
 a {
@@ -24,4 +26,7 @@ a {
 
 button {
   cursor: pointer;
+  background-color: inherit;
+  border: none;
+  font-family: $ft-jost;
 }

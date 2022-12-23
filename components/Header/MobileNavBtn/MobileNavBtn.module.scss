@@ -1,0 +1,39 @@
+.mobileNavBtn {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  height: 1.35em;
+  width: 2em;
+  @media only screen and (min-width: $navTablet) {
+    display: none;
+  }
+  div {
+    background-color: black;
+    height: 4px;
+    position: absolute;
+    width: 100%;
+    transition: all 0.15s ease-in-out;
+
+    &:first-child {
+      top: 0;
+      &.active {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+    &:nth-child(2) {
+      top: 50%;
+      &.active {
+        opacity: 0;
+      }
+    }
+    &:nth-child(3) {
+      top: 100%;
+      &.active {
+        top: 50%;
+        transition: all 0.12 ease-in-out;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
