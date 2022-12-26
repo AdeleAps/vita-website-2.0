@@ -13,9 +13,11 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${
+      openMobileNav ? `${styles.mobileNav}` : ""
+    }`}>
       <Logo />
-      <Nav />
+      <Nav openMobileNav={openMobileNav} setMobileNav={setMobileNav} />
       <Button />
       <MobileNavBtn
         className={openMobileNav ? "active" : ""}

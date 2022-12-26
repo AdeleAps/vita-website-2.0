@@ -11,7 +11,7 @@
       padding: 0.8em;
     }
     .dropdown {
-      &:hover,
+      &:hover:not(.mobileDropdown),
       &.activeDropdown {
         button::after {
           margin-left: 0.5em;
@@ -69,6 +69,68 @@
   }
   @media only screen and (min-width: $navTablet) {
     display: block;
+  }
+
+  // mobile nav
+  &.mobileNav {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: $clr-white;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2em;
+      li {
+        width: 100%;
+        border-bottom: $mobileNavBorder;
+        padding: 1em 0;
+        cursor: pointer;
+        &:first-child {
+          border-top: $mobileNavBorder;
+        }
+        & > * {
+          padding: inherit;
+          font-size: 1.15rem;
+        }
+
+        &.dropdown.activeDropdown.mobileDropdown {
+          .dropdownWrapper {
+            position: static;
+            width: 100%;
+            ul {
+              gap: 0;
+              li {
+                border: none;
+                padding: 1em;
+                &:first-child {
+                  padding-top: 0.5em;
+                }
+                &:last-child {
+                  padding-bottom: 0.5em;
+                }
+              }
+            }
+          }
+        }
+
+        button {
+          padding: 0;
+          width: 100%;
+          text-align: left;
+          &::after {
+            right: 1em;
+          }
+        }
+      }
+      .activeDropdown button::after {
+        right: 1.3em;
+      }
+    }
   }
 }
 

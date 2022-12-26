@@ -2,8 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./Nav.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import useWindowResize from "../../../utils/hooks/useWindowResize";
 
-const Nav = () => {
+const Nav = (props) => {
   //TODO: Refactor logic, split nav into components.
 
   const [dropdown, setDropdown] = useState({
@@ -14,13 +15,13 @@ const Nav = () => {
   const handleIzglitibaDropdown = () => {
     setDropdown({
       izglitiba: !dropdown.izglitiba,
-      pakalpojumi: false,
+      pakalpojumi: props.openMobileNav ? dropdown.pakalpojumi : false,
     });
   };
 
   const handlePakalpojumiDropdown = () => {
     setDropdown({
-      izglitiba: false,
+      izglitiba: props.openMobileNav ? dropdown.izglitiba : false,
       pakalpojumi: !dropdown.pakalpojumi,
     });
   };
@@ -45,9 +46,11 @@ const Nav = () => {
   const closeOnOutsideClick = (event) => {
     if (
       (dropdown.izglitiba &&
+        !props.openMobileNav &&
         izglitibaRef.current &&
         !izglitibaRef.current.contains(event.target)) ||
       (dropdown.pakalpojumi &&
+        !props.openMobileNav &&
         pakalpojumiRef.current &&
         !pakalpojumiRef.current.contains(event.target))
     ) {
@@ -64,13 +67,34 @@ const Nav = () => {
     return "";
   };
 
+  const closeNav = () => {
+    if (props.openMobileNav) {
+      props.setMobileNav(false);
+    }
+    closeDropDown();
+  };
+
+  let size = useWindowResize();
+
+  if (size.width >= 950 && props.openMobileNav) {
+    props.setMobileNav(false);
+
+    if (dropdown.izglitiba || dropdown.pakalpojumi) {
+      closeDropDown();
+    }
+  }
+
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={`${styles.nav} ${
+        props.openMobileNav ? `${styles.mobileNav}` : ""
+      }`}
+    >
       <ul>
         <li
           className={`${styles.dropdown} ${
             dropdown.izglitiba ? `${styles.activeDropdown}` : ""
-          }`}
+          } ${props.openMobileNav ? `${styles.mobileDropdown}` : ""}`}
           ref={izglitibaRef}
         >
           <button onClick={handleIzglitibaDropdown}>Izglītība/pieredze</button>
@@ -78,7 +102,7 @@ const Nav = () => {
             <ul className={styles.dropdown}>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   href="/izglitiba"
                   className={activeLink("/izglitiba")}
                 >
@@ -87,7 +111,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   href="/darba-pieredze"
                   className={activeLink("/darba-pieredze")}
                 >
@@ -100,7 +124,7 @@ const Nav = () => {
         <li
           className={`${styles.dropdown} ${
             dropdown.pakalpojumi ? `${styles.activeDropdown}` : ""
-          }`}
+          } ${props.openMobileNav ? `${styles.mobileDropdown}` : ""}`}
           ref={pakalpojumiRef}
         >
           <button onClick={handlePakalpojumiDropdown}>Pakalpojumi</button>
@@ -108,7 +132,7 @@ const Nav = () => {
             <ul className={styles.dropdown}>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   className={activeLink("/pakalpojumi/psihoterapija")}
                   href="/pakalpojumi/psihoterapija"
                 >
@@ -117,7 +141,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   className={activeLink("/pakalpojumi/smilsu-speles")}
                   href="/pakalpojumi/smilsu-speles"
                 >
@@ -126,7 +150,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   className={activeLink("/pakalpojumi/traumu-terapija")}
                   href="/pakalpojumi/traumu-terapija"
                 >
@@ -135,7 +159,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   className={activeLink("/pakalpojumi/theraplay")}
                   href="/pakalpojumi/theraplay"
                 >
@@ -144,7 +168,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   className={activeLink("/pakalpojumi/diagnostika")}
                   href="/pakalpojumi/diagnostika"
                 >
@@ -153,7 +177,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  onClick={closeDropDown}
+                  onClick={closeNav}
                   className={activeLink("/pakalpojumi/baha-ziedi")}
                   href="/pakalpojumi/baha-ziedi"
                 >
@@ -164,17 +188,29 @@ const Nav = () => {
           </div>
         </li>
         <li>
-          <Link className={activeLink("/maksa")} href="/maksa">
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/maksa")}
+            href="/maksa"
+          >
             Maksa
           </Link>
         </li>
         <li>
-          <Link className={activeLink("/kontakti")} href="/kontakti">
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/kontakti")}
+            href="/kontakti"
+          >
             Kontakti
           </Link>
         </li>
         <li>
-          <Link className={activeLink("/blogs")} href="/blogs">
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/blogs")}
+            href="/blogs"
+          >
             Blogs
           </Link>
         </li>

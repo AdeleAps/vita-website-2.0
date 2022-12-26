@@ -9,8 +9,11 @@ $clr-orange-btn-hover: #e37223;
 // fonts
  $ft-jost: 'Jost', sans-serif;
 
-//misc
-$transition: all 0.3s ease;
-
 //breakpoints
 $navTablet: 950px;
+
+//misc
+$transition: all 0.3s ease;
+$mobileNavBorder: 1px solid $clr-brown-hover;
+
+
