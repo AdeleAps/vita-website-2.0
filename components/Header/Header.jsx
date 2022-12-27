@@ -18,7 +18,7 @@ const Header = () => {
     }`}>
       <Logo />
       <Nav openMobileNav={openMobileNav} setMobileNav={setMobileNav} />
-      <Button />
+      <Button className="navBtn" />
       <MobileNavBtn
         className={openMobileNav ? "active" : ""}
         onClick={handleOpenMobileNav}

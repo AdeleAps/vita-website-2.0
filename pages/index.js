@@ -1,4 +1,5 @@
 import Head from "next/head";
+import LandingPage from "../components/LandingPage/LandingPage";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Psiholoģes Vitas Apsītes mājaslapa" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <LandingPage />
       <footer></footer>
     </div>
   );

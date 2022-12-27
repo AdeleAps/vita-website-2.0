@@ -1,17 +1,22 @@
 .button {
+  background-color: $clr-orange-btn;
+  color: $clr-white;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 0.9em 2.75em;
+  transition: $transition;
+  &:hover {
+    background-color: $clr-orange-btn-hover;
+  }
+  &.navBtn {
     display: none;
-    background-color: $clr-orange-btn;
-    color: $clr-white;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    padding: 0.9em 2.75em;
-    transition: $transition;
-    &:hover {
-        background-color: $clr-orange-btn-hover;
-    }
-    
     @media only screen and (min-width: $navTablet) {
-        display: block;
+      display: block;
     }
+  }
+  &.introBtn {
+    padding-inline: 6em;
+    font-size: 1rem;
+  }
 }

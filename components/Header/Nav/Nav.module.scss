@@ -6,8 +6,8 @@
     list-style: none;
     li > * {
       font-size: 1rem;
-      font-weight: 500;
-      font-family: "Jost", sans-serif;
+      font-weight: 600;
+      font-family: $ft-hk-grotesk;
       padding: 0.8em;
     }
     .dropdown {
@@ -72,6 +72,8 @@
   }
 
   // mobile nav
+
+  //TODO: Fix height not filling 100% of page / block overflow-y.
   &.mobileNav {
     display: block;
     position: absolute;
@@ -79,8 +81,7 @@
     left: 0;
     background-color: $clr-white;
     width: 100%;
-    height: 100%;
-    overflow: scroll;
+    min-height: 100%;
     ul {
       flex-direction: column;
       align-items: flex-start;

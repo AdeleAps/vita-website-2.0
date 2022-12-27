@@ -1,14 +1,5 @@
 import { useState, useEffect } from "react";
 
-// function App() {
-//   const size = useWindowSize();
-//   return (
-//     <div>
-//       {size.width}px / {size.height}px
-//     </div>
-//   );
-// }
-
 const useWindowResize = () => {
   const [windowSize, setWindowSize] = useState({
     width: null,

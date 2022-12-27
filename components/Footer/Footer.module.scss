@@ -1,0 +1,22 @@
+.footer {
+    color: $clr-light-gray-text;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    padding: 2em;
+
+    a.email{
+        line-height: 10px;
+        border-bottom: $clr-black solid 1px;
+    }
+
+    div:first-child {
+        text-align: center;
+        font-size: 1.15em;
+        margin-bottom: 1em;
+    }
+
+}

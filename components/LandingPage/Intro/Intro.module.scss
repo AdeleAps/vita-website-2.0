@@ -1,0 +1,25 @@
+.intro {
+  background-color: $clr-cream-background;
+  img {
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+  }
+  div {
+    padding: 5em 2em;
+    font-family: $ft-hk-grotesk;
+
+    h1 {
+      font-family: $ft-title;
+      font-size: 2.7em;
+      letter-spacing: 1px;
+      max-width: 80%;
+      margin: 0;
+    }
+    p {
+      font-family: $ft-esteban;
+      font-size: 1rem;
+      line-height: 1.4em;
+    }
+  }
+}
