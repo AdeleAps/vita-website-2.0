@@ -4,14 +4,14 @@ import styles from "./BioPostIt.module.scss";
 const BioPostIt = () => {
   return (
     <section className={styles.bioNote}>
-      <h3>Par mani</h3>
-      <img src="/images/bio.jpg" alt="" />
+      <div>
+        <img src="/images/bio.jpg" alt="" />
+      </div>
       <div>
         <h5>Vita Apsīte, Mg.psych.</h5>
         <p>
-          {" "}
-          "Nu jau divdesmito gadu strādāju par psihologu, jau vairākus gadus esmu
-          sistēmiskā psihoterapeite, kaut arī psihoterapeitiskās metodes
+          "Nu jau divdesmito gadu strādāju par psihologu, jau vairākus gadus
+          esmu sistēmiskā psihoterapeite, kaut arī psihoterapeitiskās metodes
           konsultēšanā esmu izmantojusi visu laiku. Tagad strādāju privātpraksē
           ar individuāliem klientiem un ģimenēm.
         </p>

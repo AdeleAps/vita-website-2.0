@@ -7,8 +7,10 @@ const Service = (props) => {
       <div>
         <img src={props.src} />
       </div>
-      <h5>{props.title}</h5>
-      <p>{props.description}</p>
+      <div>
+        <h5>{props.title}</h5>
+        <p>{props.description}</p>
+      </div>
     </div>
   );
 };

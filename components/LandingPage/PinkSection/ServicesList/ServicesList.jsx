@@ -36,11 +36,12 @@ const Services = () => {
       <h4>Pakalpojumi</h4>
 
       {/* TODO: Add a fadein effect on scroll for these */}
-      {services.map((service) => (
+      {services.map((service, index) => (
         <Service
           src={service.src}
           title={service.title}
           description={service.description}
+          key={index}
         />
       ))}
     </section>

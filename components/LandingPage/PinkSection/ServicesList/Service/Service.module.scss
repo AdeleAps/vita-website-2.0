@@ -1,27 +1,35 @@
 .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div:first-child {
+    background-image: url("/svg/service-background.svg");
+    height: 4.4rem;
+    width: 9rem;
+    margin: 2.5rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    div {
-        background-image: url("/svg/service-background.svg");
-        height: 4.4rem;
-        width: 9rem;
-        margin: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-            border-radius: 50%;
-            width: 7rem;
-        }
+    justify-content: center;
+    img {
+      border-radius: 50%;
+      width: 7rem;
     }
+  }
+
+  div:last-child {
+    text-align: center;
     h5 {
-        font-family: $ft-hk-grotesk;
-        font-size: 1.2em;
-        font-weight: 600;
-        margin: 0;
+      font-family: $ft-hk-grotesk;
+      font-size: 1.2em;
+      font-weight: 600;
+      margin: 0;
     }
-    p {
-        text-align: center;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    flex-direction: row;
+    div:last-child {
+        text-align: left;
     }
+  }
 }

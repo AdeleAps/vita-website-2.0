@@ -18,5 +18,8 @@
   &.introBtn {
     padding-inline: 6em;
     font-size: 1rem;
+    @media only screen and (min-width: $navTablet) {
+     width: 100%;
+    }
   }
 }
