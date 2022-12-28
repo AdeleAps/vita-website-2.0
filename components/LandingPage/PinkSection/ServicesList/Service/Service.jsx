@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./Service.module.scss";
+import { motion } from "framer-motion";
 
 const Service = (props) => {
   return (
-    <div className={styles.service}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className={styles.service}
+    >
       <div>
         <img src={props.src} />
       </div>
@@ -11,7 +17,7 @@ const Service = (props) => {
         <h5>{props.title}</h5>
         <p>{props.description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

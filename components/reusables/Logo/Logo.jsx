@@ -2,9 +2,9 @@ import styles from "./Logo.module.scss";
 import React from "react";
 import Link from "next/link";
 
-function Logo() {
+const Logo = (props) => {
   return (
-    <Link href="/">
+    <Link onClick={props.onClick} href="/">
       <div className={styles.logo}>placeholder</div>
     </Link>
   );

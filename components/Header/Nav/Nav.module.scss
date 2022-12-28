@@ -72,8 +72,6 @@
   }
 
   // mobile nav
-
-  //TODO: Fix height not filling 100% of page / block overflow-y.
   &.mobileNav {
     display: block;
     position: absolute;
@@ -81,11 +79,11 @@
     left: 0;
     background-color: $clr-white;
     width: 100%;
-    min-height: 100%;
     ul {
       flex-direction: column;
       align-items: flex-start;
       padding: 2em;
+      overflow-y: visible;
       li {
         width: 100%;
         border-bottom: $mobileNavBorder;

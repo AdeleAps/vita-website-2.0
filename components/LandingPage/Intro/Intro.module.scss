@@ -10,7 +10,8 @@
     font-family: $ft-hk-grotesk;
 
     h1 {
-      font-family:  "HK-Grotesk-SemiBold";
+      font-family: $ft-title;
+      font-weight: 600;
       font-size: 2.5em;
       max-width: 80%;
       margin: 0;

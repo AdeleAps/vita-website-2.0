@@ -3,24 +3,26 @@ import Logo from "../reusables/Logo/Logo";
 import styles from "./Header.module.scss";
 import Nav from "./Nav/Nav";
 import MobileNavBtn from "./MobileNavBtn/MobileNavBtn";
-import { useState } from "react";
 
-const Header = () => {
-  const [openMobileNav, setMobileNav] = useState(false);
+const Header = (props) => {
 
   const handleOpenMobileNav = () => {
-    setMobileNav(!openMobileNav);
+    props.setMobileNav(!props.openMobileNav);
   };
+
+  const closeMobileNav = () => {
+    props.setMobileNav(false);
+  }
 
   return (
     <header className={`${styles.header} ${
-      openMobileNav ? `${styles.mobileNav}` : ""
+      props.openMobileNav ? `${styles.mobileNav}` : ""
     }`}>
-      <Logo />
-      <Nav openMobileNav={openMobileNav} setMobileNav={setMobileNav} />
+      <Logo onClick={closeMobileNav} />
+      <Nav openMobileNav={props.openMobileNav} setMobileNav={props.setMobileNav} />
       <Button className="navBtn" />
       <MobileNavBtn
-        className={openMobileNav ? "active" : ""}
+        className={props.openMobileNav ? "active" : ""}
         onClick={handleOpenMobileNav}
       />
     </header>
