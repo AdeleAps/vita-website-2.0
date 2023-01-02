@@ -1,15 +1,17 @@
-import React from 'react'
-import BioPostIt from './BioPostIt/BioPostIt'
-import styles from "./PinkSection.module.scss"
-import ServicesList from './ServicesList/ServicesList'
+import React from "react";
+import BioPostIt from "./BioPostIt/BioPostIt";
+import LandingFormSection from "./LandingFormSection/LandingFormSection";
+import styles from "./PinkSection.module.scss";
+import ServicesList from "./ServicesList/ServicesList";
 
 const PinkSection = () => {
   return (
     <div className={styles.pinkSection}>
-        <ServicesList />
-        <BioPostIt />
+      <ServicesList />
+      <BioPostIt />
+      <LandingFormSection submitBtn={styles.submitBtn}/>
     </div>
-  )
-}
+  );
+};
 
-export default PinkSection
+export default PinkSection;

@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./LandingPage.module.scss";
 import Intro from "./Intro/Intro";
 import PinkSection from "./PinkSection/PinkSection";
-const LandingPage = (props) => {
+const LandingPage = () => {
+
   return (
-    <div className={styles.landingPage}>
+    <div>
       <Intro />
       <PinkSection />
     </div>

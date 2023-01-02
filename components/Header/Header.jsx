@@ -5,22 +5,33 @@ import Nav from "./Nav/Nav";
 import MobileNavBtn from "./MobileNavBtn/MobileNavBtn";
 
 const Header = (props) => {
-
   const handleOpenMobileNav = () => {
     props.setMobileNav(!props.openMobileNav);
   };
 
   const closeMobileNav = () => {
     props.setMobileNav(false);
-  }
+  };
 
   return (
-    <header className={`${styles.header} ${
-      props.openMobileNav ? `${styles.mobileNav}` : ""
-    }`}>
+    <header
+      className={`${styles.header} ${
+        props.openMobileNav ? `${styles.mobileNav}` : ""
+      }`}
+    >
       <Logo onClick={closeMobileNav} />
-      <Nav openMobileNav={props.openMobileNav} setMobileNav={props.setMobileNav} />
-      <Button className="navBtn" />
+      <Nav
+        openMobileNav={props.openMobileNav}
+        setMobileNav={props.setMobileNav}
+      />
+      <Button
+        onClick={() => {
+          props.setOpenFormModal(true);
+        }}
+        className="navBtn"
+      >
+        Pieteikties
+      </Button>
       <MobileNavBtn
         className={props.openMobileNav ? "active" : ""}
         onClick={handleOpenMobileNav}

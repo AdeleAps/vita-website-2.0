@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 
 const Theraplay = () => {
   return (
-    <div>Theraplay page</div>
-  )
-}
+    <WebpageLayout>
+      <div>Theraplay page</div>
+    </WebpageLayout>
+  );
+};
 
 export default Theraplay;

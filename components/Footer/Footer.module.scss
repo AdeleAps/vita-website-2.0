@@ -19,4 +19,22 @@
         margin-bottom: 1em;
     }
 
+    div:last-child {
+        span {
+            margin-right: 1rem;
+            position: relative;
+            top: 1px;
+        }
+        @media only screen and (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            span {
+                margin-right: 0;
+            }
+        }
+    }
+
 }

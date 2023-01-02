@@ -19,7 +19,26 @@
     padding-inline: 6em;
     font-size: 1rem;
     @media only screen and (min-width: $navTablet) {
-     width: 100%;
+      width: 100%;
+    }
+  }
+  &.submitBtn {
+    width: 100%;
+    font-size: 0.9em;
+    @media only screen and (min-width: $mobile) {
+      width: 35%;
+    }
+    @media only screen and (min-width: $desktop-wide) {
+      width: 20%;
+    }
+  }
+  &.submitBtnPopup {
+    width: 75%;
+    @media only screen and (min-width: $mobile) {
+      width: 40%;
+    }
+    @media only screen and (min-width: $desktop-wide) {
+      width: 30%;
     }
   }
 }

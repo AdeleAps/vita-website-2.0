@@ -8,6 +8,11 @@ $clr-orange-btn-hover: #e37223;
 $clr-pink-background: #f0c9bc;
 $clr-pink-background-dark: #cb8275;
 $clr-light-gray-text: #a3a8a0;
+$clr-dusty-gray: #727d6d;
+$clr-light-gray: #9f9c9c;
+$clr-error-orange: #e64625;
+$clr-invalid-input: #f9f1ec;
+$clr-error-border: #e64625;
 
 // fonts
  $ft-hk-grotesk: "HK-Grotesk-Reg", sans-serif;
@@ -15,8 +20,10 @@ $clr-light-gray-text: #a3a8a0;
  $ft-esteban: 'Esteban', serif;
 
 //breakpoints
-$navTablet: 950px;
+$mobile: 500px;
 $tablet: 750px;
+$navTablet: 950px;
+$desktop-wide: 1500px;
 
 //misc
 $transition: all 0.3s ease;

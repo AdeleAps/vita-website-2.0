@@ -1,15 +1,18 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2em;
-    background-color: $clr-white;
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    background-color: $clr-white;
-    z-index: 2;
-    &.mobileNav {
-        position: static;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  background-color: $clr-white;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  background-color: $clr-white;
+  z-index: 2;
+  &.mobileNav {
+    position: static;
+  }
+  @media screen and (max-width: $tablet) {
+    padding: 0 3em;
+  }
 }

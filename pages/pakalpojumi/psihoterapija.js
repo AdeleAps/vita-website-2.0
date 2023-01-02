@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 
 const Psihoterapija = () => {
   return (
-    <div>Ģimenes psihoterapija page</div>
-  )
-}
+    <WebpageLayout>
+      <div>Ģimenes psihoterapija page</div>
+    </WebpageLayout>
+  );
+};
 
 export default Psihoterapija;

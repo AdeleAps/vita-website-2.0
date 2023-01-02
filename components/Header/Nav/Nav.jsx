@@ -121,6 +121,24 @@ const Nav = (props) => {
             </ul>
           </div>
         </li>
+        <li>
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/kontakti")}
+            href="/kontakti"
+          >
+            Kontakti
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/maksa")}
+            href="/maksa"
+          >
+            Maksa
+          </Link>
+        </li>
         <li
           className={`${styles.dropdown} ${
             dropdown.pakalpojumi ? `${styles.activeDropdown}` : ""
@@ -186,24 +204,6 @@ const Nav = (props) => {
               </li>
             </ul>
           </div>
-        </li>
-        <li>
-          <Link
-            onClick={props.openMobileNav && closeNav}
-            className={activeLink("/maksa")}
-            href="/maksa"
-          >
-            Maksa
-          </Link>
-        </li>
-        <li>
-          <Link
-            onClick={props.openMobileNav && closeNav}
-            className={activeLink("/kontakti")}
-            href="/kontakti"
-          >
-            Kontakti
-          </Link>
         </li>
         <li>
           <Link

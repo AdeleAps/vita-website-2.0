@@ -1,0 +1,15 @@
+.modal {
+    background-color: $clr-white;
+    padding: 3em;
+    width: 90%;
+    border-radius: 8px;
+    @media only screen and (min-width: $mobile) {
+        width: 70%;
+    }
+    @media only screen and (min-width: $tablet) {
+        width: 50%;
+    }
+    @media only screen and (min-width: $navTablet) {
+        width: 40%;
+    }
+}

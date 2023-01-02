@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 
 const SmilsuSpeles = () => {
   return (
-    <div>Smilšu spēles page</div>
-  )
-}
+    <WebpageLayout>
+      <div>Smilšu spēles page</div>
+    </WebpageLayout>
+  );
+};
 
 export default SmilsuSpeles;
