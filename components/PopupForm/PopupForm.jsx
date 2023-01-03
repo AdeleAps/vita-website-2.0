@@ -14,6 +14,8 @@ const PopupForm = (props) => {
           }}
         >
           <div className={styles.popupForm}>
+
+            {/* TODO: Add a close button */}
             <p>
               Piesakieties, zvanot pa tālruni <span>29549969</span>, rakstot uz
               epastu{" "}

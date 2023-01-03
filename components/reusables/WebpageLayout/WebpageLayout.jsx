@@ -15,7 +15,7 @@ const WebpageLayout = (props) => {
       {!props.openMobileNav && (
         <>
           {props.children}
-          <Footer />
+          <Footer setOpenFormModal={props.setOpenFormModal} />
         </>
       )}
     </>

@@ -1,13 +1,8 @@
 import Head from "next/head";
 import LandingPage from "../components/LandingPage/LandingPage";
 import WebpageLayout from "../components/reusables/WebpageLayout/WebpageLayout";
-import { useState } from "react";
-import PopupForm from "../components/PopupForm/PopupForm";
 
-export default function Home() {
-  const [openMobileNav, setMobileNav] = useState(false);
-  const [openFormModal, setOpenFormModal] = useState(false);
-
+export default function Home(props) {
   return (
     <div>
       <Head>
@@ -19,13 +14,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WebpageLayout
-        openMobileNav={openMobileNav}
-        setMobileNav={setMobileNav}
-        setOpenFormModal={setOpenFormModal}
+        openMobileNav={props.openMobileNav}
+        setMobileNav={props.setMobileNav}
+        setOpenFormModal={props.setOpenFormModal}
       >
-        <LandingPage setOpenFormModal={setOpenFormModal} />
+        <LandingPage setOpenFormModal={props.setOpenFormModal} />
       </WebpageLayout>
-      <PopupForm openFormModal={openFormModal} setOpenFormModal={setOpenFormModal} />
     </div>
   );
 }

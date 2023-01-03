@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer className={styles.footer}>
       <div>
@@ -10,10 +10,14 @@ const Footer = () => {
         <a href="mailto:vita.psihologs@gmail.com">
           <strong>rakstiet</strong>
         </a>{" "}
-        e-pastā vai{" "}
-        <a href="">
-          <strong>aizpildiet</strong>
-        </a>{" "}
+        e-pastā vai
+        <a
+          onClick={() => {
+            props.setOpenFormModal(true);
+          }}
+        >
+          <strong> aizpildiet </strong>
+        </a>
         pieteikumu.
       </div>
       <div>

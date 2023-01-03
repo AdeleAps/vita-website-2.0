@@ -1,9 +1,13 @@
 import React from "react";
 import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 
-const TraumuTerapija = () => {
+const TraumuTerapija = (props) => {
   return (
-    <WebpageLayout>
+    <WebpageLayout
+      openMobileNav={props.openMobileNav}
+      setMobileNav={props.setMobileNav}
+      setOpenFormModal={props.setOpenFormModal}
+    >
       <div>Traumu terapija page</div>
     </WebpageLayout>
   );
