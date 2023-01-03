@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Intro.module.scss";
+import Button from "../../reusables/Button/Button";
 
-const Intro = () => {
-
+const Intro = (props) => {
   return (
     <main className={styles.intro}>
       <div>
@@ -17,6 +17,15 @@ const Intro = () => {
           Psihoterapeitu biedrības sertificēta psihoterapijas speciāliste
           (ģimenes psihoterapija) kopš 2018. gada.
         </p>
+        <Button
+          onClick={() => {
+            props.setOpenFormModal(true);
+          }}
+          type="button"
+          className="introBtn"
+        >
+          Pieteikties
+        </Button>
       </div>
     </main>
   );

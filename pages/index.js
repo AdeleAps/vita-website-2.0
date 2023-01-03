@@ -23,7 +23,7 @@ export default function Home() {
         setMobileNav={setMobileNav}
         setOpenFormModal={setOpenFormModal}
       >
-        <LandingPage />
+        <LandingPage setOpenFormModal={setOpenFormModal} />
       </WebpageLayout>
       <PopupForm openFormModal={openFormModal} setOpenFormModal={setOpenFormModal} />
     </div>
