@@ -9,7 +9,7 @@ const Intro = (props) => {
         <img src="./images/intro.jpg" alt="" />
       </div>
       <div>
-        <h1>Psihologa, ģimenes psihoterapijas speciālista privātprakse.</h1>
+        <h1>Psihologa, <br/> ģimenes psihoterapijas speciālista privātprakse.</h1>
         <p>
           Esmu sertificēta psiholoģe (izglītības un skolu, klīniskā un
           veselības, konsultatīvā psiholoģijā), Latvijas Smilšu spēles terapijas
