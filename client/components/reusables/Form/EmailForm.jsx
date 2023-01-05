@@ -3,8 +3,11 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
 import styles from "./EmailForm.module.scss";
+import { useAxios } from "../../../utils/hooks/useAxios";
 
 const EmailForm = (props) => {
+  const { fetchData } = useAxios();
+
   const [focus, setFocus] = useState({
     focus: false,
     activeField: null,
@@ -34,23 +37,32 @@ const EmailForm = (props) => {
         description: "",
       }}
       validationSchema={Yup.object({
-        firstName: Yup.string().max(50, "Maks. 50 rakstzīmes").required(" "),
-        lastName: Yup.string().max(50, "Maks. 50 rakstzīmes").required(" "),
+        firstName: Yup.string()
+          .max(50, "Ne vairāk kā 50 rakstzīmes")
+          .required(" "),
+        lastName: Yup.string()
+          .max(50, "Ne vairāk kā 50 rakstzīmes")
+          .required(" "),
         email: Yup.string().email().required(" "),
         description: Yup.string()
-          .max(5000, "Maks. 5000 rakstzīmes")
+          .max(5000, "Ne vairāk kā 5000 rakstzīmes")
           .required(" "),
       })}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        fetchData({
+          method: "POST",
+          url: "/send",
+          headers: {
+            accept: "*/*",
+            "Content-Type": "application/json"
+          },
+          data: values
+        });
+        setSubmitting(false);
       }}
     >
-      {({ errors, handleBlur, touched, values}) => (
-        <Form className={`${styles.formikForm} ${styles[props.popUpForm]
-        }`} >
+      {({ errors, handleBlur, touched, values }) => (
+        <Form className={`${styles.formikForm} ${styles[props.popUpForm]}`}>
           <fieldset
             className={`${
               errors.firstName && touched.firstName && styles.error
@@ -90,7 +102,7 @@ const EmailForm = (props) => {
             />
 
             <legend
-              className={focus.activeField === "lastName"  ? styles.active : ""}
+              className={focus.activeField === "lastName" ? styles.active : ""}
               htmlFor="lastName"
             >
               Uzvārds
@@ -113,7 +125,7 @@ const EmailForm = (props) => {
               value={values.email}
             />
             <legend
-              className={focus.activeField === "email"  ? styles.active : ""}
+              className={focus.activeField === "email" ? styles.active : ""}
               htmlFor="email"
             >
               E-pasta adrese
@@ -122,7 +134,9 @@ const EmailForm = (props) => {
           <fieldset
             className={`${
               errors.description && touched.description && styles.error
-            } ${touched.description && !errors.description && styles.touched} ${styles.description}`}
+            } ${touched.description && !errors.description && styles.touched} ${
+              styles.description
+            }`}
           >
             <Field
               {...inputFocusProps}
@@ -136,7 +150,9 @@ const EmailForm = (props) => {
 
             {/* TODO: fix the height lag when changing legend visibility */}
             <legend
-              className={focus.activeField === "description"  ? styles.active : ""}
+              className={
+                focus.activeField === "description" ? styles.active : ""
+              }
               htmlFor="description"
             >
               Apraksts
