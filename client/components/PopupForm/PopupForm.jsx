@@ -14,8 +14,6 @@ const PopupForm = (props) => {
           }}
         >
           <div className={styles.popupForm}>
-
-            {/* TODO: Add a close button */}
             <p>
               Piesakieties, zvanot pa tālruni <span>29549969</span>, rakstot uz
               epastu{" "}
@@ -26,7 +24,14 @@ const PopupForm = (props) => {
               </span>{" "}
               vai aizpildot šo <span>pieteikumu</span>.
             </p>
-            <EmailForm popUpForm="popUpForm" submitBtn="submitBtnPopup" />
+            <EmailForm
+              popUpForm="popUpForm"
+              submitBtn="submitBtnPopup"
+              feebackPopup={props.feebackPopup}
+              setOpenFeedbackPopup={props.setOpenFeedbackPopup}
+              setOpenFormModal={props.setOpenFormModal}
+              setName={props.setName}
+            />
           </div>
         </Modal>
       )}

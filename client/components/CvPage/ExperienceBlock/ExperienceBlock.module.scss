@@ -1,0 +1,30 @@
+.experienceBlock {
+  background-color: $clr-pink-background;
+  display: flex;
+  align-items: stretch;
+  border-top-left-radius: 10px;
+  div {
+    flex: 50%;
+    &:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ul {
+      font-size: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 70%;
+      list-style-image: url("/svg/bullet-point.svg");
+      padding-left: 10px;
+      border-left: 1px solid gray;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      max-width: 100%;
+      border-top-right-radius: 10px;
+    }
+  }
+}

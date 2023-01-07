@@ -19,7 +19,7 @@ const Services = () => {
 
   const services = [
     new ServiceClass(
-      "Smilšu spēļu terapija",
+      "Smilšu spēles terapija",
       "Smilšu spēlē ar miniatūrām figūrām-simboliem cilvēka iekšējā pasaule kļūst redzama un var tikt sadziedēta."
     ),
     new ServiceClass(

@@ -1,17 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ModalBackdrop from "../ModalBackdrop/ModalBackdrop";
-import styles from "./Modal.module.scss"
+import styles from "./Modal.module.scss";
+import CloseButton from "../../CloseButton/CloseButton";
 
 const dropIn = {
   hidden: {
-    opacity: 0
+    opacity: 0,
   },
   visible: {
     opacity: 1,
     transition: {
       duration: 0.2,
-      type: "fadeIn"
+      type: "fadeIn",
     },
   },
   exit: {
@@ -32,6 +33,7 @@ const Modal = (props) => {
         animate={dropIn.visible}
         exit={dropIn.exit}
       >
+        <CloseButton onClick={props.onClick} />
         {props.children}
       </motion.div>
     </ModalBackdrop>

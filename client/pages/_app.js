@@ -1,22 +1,39 @@
 import "../styles/globals.scss";
 import { useState } from "react";
 import PopupForm from "../components/PopupForm/PopupForm";
+import PopupFeedback from "../components/PopupFeedback/PopupFeedback";
+import { NameContext } from "../utils/context/contexts";
 
 function MyApp({ Component, pageProps }) {
   const [openMobileNav, setMobileNav] = useState(false);
   const [openFormModal, setOpenFormModal] = useState(false);
+  const [feebackPopup, setOpenFeedbackPopup] = useState(false);
+  const [name, setName] = useState();
+
   return (
     <>
+    <NameContext.Provider value={name}></NameContext.Provider>
       <Component
         openMobileNav={openMobileNav}
         setMobileNav={setMobileNav}
         openFormModal={openFormModal}
         setOpenFormModal={setOpenFormModal}
+        setOpenFeedbackPopup={setOpenFeedbackPopup}
+        feebackPopup={feebackPopup}
         {...pageProps}
       />
-       <PopupForm
+      <PopupForm
         openFormModal={openFormModal}
         setOpenFormModal={setOpenFormModal}
+        feebackPopup={feebackPopup}
+        setOpenFeedbackPopup={setOpenFeedbackPopup}
+        setName={setName}
+
+      />
+      <PopupFeedback
+        feebackPopup={feebackPopup}
+        setOpenFeedbackPopup={setOpenFeedbackPopup}
+        name={name}
       />
     </>
   );

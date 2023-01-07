@@ -1,24 +1,24 @@
 import nodemailer from "nodemailer";
 
-const emojiOptions = [
-  "❤️",
-  "💖",
-  "🍄",
-  "🦀",
-  "🌞",
-  "🌺",
-  "🌟",
-  "🐹",
-  "🐸",
-  "😻",
-  "🦆",
-];
-const emoji =
-  emojiOptions[Math.floor(Math.random() * (emojiOptions.length - 1))];
-
 const sendEmail = (emailBody) => {
+  const emojiOptions = [
+    "❤️",
+    "💖",
+    "🍄",
+    "🦀",
+    "🌞",
+    "🌺",
+    "🌟",
+    "🐹",
+    "🐸",
+    "😻",
+    "🦆",
+  ];
+  const emoji =
+    emojiOptions[Math.floor(Math.random() * (emojiOptions.length - 1))];
+
   const formattedEmailBody = `Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji}  Vārds: ${emailBody.firstName} Uzvārds: ${emailBody.lastName} E-pasta adrese: ${emailBody.email} Apraksts: ${emailBody.description}`;
-  const formattedEmailBodyHTML = `<div style="font-size: 17px; font-family: Times New Roman"><p style="font-size: 14px; color:#504F4F; "><i>Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji}</i></p> <p><strong>Vārds</strong>: ${emailBody.firstName} </pr> <p><strong>Uzvārds</strong>: ${emailBody.lastName} </p><p>  <strong>E-pasta adrese</strong>: ${emailBody.email} </p><p>  <strong>Apraksts</strong>: ${emailBody.description}</p></div>`;
+  const formattedEmailBodyHTML = `<div style="font-size: 17px; font-family: Times New Roman"><p style="font-size: 14px; color:#504F4F; ">Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji}</p> <p><strong>Vārds</strong>: ${emailBody.firstName} </pr> <p><strong>Uzvārds</strong>: ${emailBody.lastName} </p><p>  <strong>E-pasta adrese</strong>: ${emailBody.email} </p><p>  <strong>Apraksts</strong>: ${emailBody.description}</p></div>`;
 
   let transporter = nodemailer.createTransport({
     service: process.env.MAILER_SERVICE,
@@ -36,11 +36,9 @@ const sendEmail = (emailBody) => {
       text: formattedEmailBody,
       html: formattedEmailBodyHTML,
     },
-    function (err, data) {
+    function (err) {
       if (err) {
         console.log(err);
-      } else {
-        console.log("Email sent!" + data);
       }
     }
   );

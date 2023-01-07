@@ -1,13 +1,9 @@
 import React from "react";
 import WebpageLayout from "../components/reusables/WebpageLayout/WebpageLayout";
 import CvPage from "../components/CvPage/CvPage";
+import { getEducationData } from "../data/cv-page/getEducation";
 
 const Izglitiba = (props) => {
-  const CvProps = {
-    title: "Izglītība/pieredze",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  };
 
   return (
     <WebpageLayout
@@ -15,7 +11,7 @@ const Izglitiba = (props) => {
       setMobileNav={props.setMobileNav}
       setOpenFormModal={props.setOpenFormModal}
     >
-      <CvPage {...CvProps} />
+      <CvPage {...getEducationData()} />
     </WebpageLayout>
   );
 };
