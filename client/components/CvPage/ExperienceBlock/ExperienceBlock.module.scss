@@ -1,30 +1,82 @@
 .experienceBlock {
-  background-color: $clr-pink-background;
   display: flex;
-  align-items: stretch;
-  border-top-left-radius: 10px;
+  flex-direction: column;
+  width: 85%;
+  font-size: 1.05rem;
+  margin: 2rem;
+  border: 2px solid $clr-pink-background-light;
+  border-radius: 50px;
+
   div {
     flex: 50%;
-    &:first-child {
+    &.timeLine {
       display: flex;
       align-items: center;
-      justify-content: center;
+      &::before {
+        content: "";
+        display: inline-block;
+        border: 1px solid $clr-pink-background-light;
+        height: 100%;
+        position: relative;
+        left: 62px;
+        z-index: 1;
+      }
     }
     ul {
-      font-size: 1.5em;
       display: flex;
       flex-direction: column;
+      gap: 1.8em;
       justify-content: space-around;
-      height: 70%;
-      list-style-image: url("/svg/bullet-point.svg");
-      padding-left: 10px;
-      border-left: 1px solid gray;
+      list-style: none;
+      line-height: 1.6em;
+
+      li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        span:first-child {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 2.5em;
+            margin-right: 1em;
+            background-color: $clr-pink-background-light;
+            border-radius: 50%;
+            padding: 10px;
+          }
+        }
+      }
     }
-    img {
-      object-fit: cover;
-      height: 100%;
-      max-width: 100%;
-      border-top-right-radius: 10px;
+    &:last-child {
+      position: relative;
+      padding: 1em;
+      .polaroid {
+        background-color: $clr-white;
+        padding: 1rem 1rem 5rem 1rem;
+        width: 400px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+        img {
+          max-width: 100%;
+          object-fit: contain;
+          aspect-ratio: 1 / 1;
+        }
+        figcaption {
+         text-align: center;
+         font-family: $ft-handwritten;
+         margin: 0.5rem 0;
+         font-size: 1.3em;
+         color: $clr-blue-ink;
+        }
+      }
     }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+    @media only screen and (min-width: $mobile) {
+    flex-direction: row;
+    width: 75%;
   }
 }

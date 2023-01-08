@@ -16,10 +16,10 @@
 
     h1 {
       font-family: $ft-title;
-      font-weight: 600;
       font-size: 2.5em;
       max-width: 80%;
       margin: 0;
+      font-weight: 500;
     }
     p {
       font-family: $ft-esteban;
@@ -41,6 +41,9 @@
       flex: 50%;
       h1 {
         font-size: 3.5em;
+      }
+      p {
+        line-height: 1.7em;
       }
     }
   }

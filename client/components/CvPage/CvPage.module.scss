@@ -1,27 +1,53 @@
 .cvPage {
   padding-top: 80px;
-  background-color: $clr-cream-background;
   display: flex;
   flex-direction: column;
   align-items: center;
-  .intro {
+  background-color: $clr-pink-background;
+  .introContainer {
+    background-size: cover;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-      font-size: 3rem;
-      font-family: "HK-Grotesk-SemiBold";
-      margin-bottom: 0;
-    }
-    p {
-        font-size: 1rem;
-        line-height: 1.5em;
-        max-width: 60%;
+    justify-content: center;
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $clr-white;
+      box-shadow: $boxShadow;
+      width: 85%;
+      margin: 1em;
+      padding: 3em;
+      border-radius: 3px;
+      h1 {
+        font-size: 1.1rem;
+        font-family: "HK-Grotesk-SemiBold";
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
         text-align: center;
+        &::after {
+          content: url("/svg/text-divider.svg");
+          display: block;
+          width: 6em;
+          margin: auto;
+          padding-top: 1em;
+          filter: invert(66%) sepia(52%) saturate(1173%) hue-rotate(348deg)
+            brightness(96%) contrast(92%);
+        }
+      }
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5em;
+        max-width: 85%;
+        text-align: center;
+      }
     }
   }
-  .experienceBlockContainer {
-    padding: 10%;
-    padding-top: 5em;
+  @media only screen and (min-width: $mobile) {
+    .introContainer .intro {
+      width: 75%;
+      padding: 4em;
+      margin: 4em;
+    }
   }
 }

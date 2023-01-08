@@ -5,7 +5,7 @@ const BioPostIt = () => {
   return (
     <section className={styles.bioNote}>
       <div>
-        <img src="/images/bio.jpg" alt="" />
+        <img src="./images/bio.jpg" alt="Vita Apsīte" />
       </div>
       <div>
         <h5>Vita Apsīte, Mg.psych.</h5>

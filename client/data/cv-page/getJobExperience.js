@@ -1,7 +1,21 @@
 export const getJobExperienceData = () => {
   return {
-    title: "Darba pieredze",
+    title: "DARBA PIEREDZE",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    backgroundImage: "url(./images/sand-background2.jpg)",
+    experience: [
+      {
+        listItems: [
+          "Sistēmiskais supervizors apmācībā no 2021.gada.",
+          "Psihologa sertifikāts nr.1100420 izglītības un skolu psiholoģijā.",
+          "Psihologa sertifikāts nr.1300472 klīniskajā un veselības psiholoģijā.",
+          "Psihologa pārrauga sertifikāts nr.1300167 klīniskajā un veselības psiholoģijā.",
+          "Psihologa sertifikāts nr.1500473 konsultatīvajā psiholoģijā.",
+        ],
+        photo: "/images/cv-page/izglitiba-1.jpg",
+        photoAltText: "Ekstra garš attēla apraksts, lai pārbaudītu tekstu.",
+      },
+    ],
   };
 };

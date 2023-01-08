@@ -16,6 +16,7 @@
       margin-top: 0.5em;
       font-size: 2em;
       font-family: "HK-Grotesk-SemiBold";
+      font-weight: 500;
     }
     p {
       text-align: left;
@@ -23,7 +24,7 @@
   }
   @media only screen and (min-width: 550px) {
     // change to dark pink
-    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+    box-shadow: $boxShadow;
     flex-direction: row;
     div:first-child {
       flex: 30%;
@@ -41,4 +42,5 @@
   @media only screen and (min-width: $navTablet) {
     max-width: 85%;
     margin: auto;
-}}
+  }
+}

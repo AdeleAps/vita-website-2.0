@@ -1,18 +1,11 @@
-import Head from "next/head";
 import LandingPage from "../components/LandingPage/LandingPage";
 import WebpageLayout from "../components/reusables/WebpageLayout/WebpageLayout";
+import WebsiteHead from "../components/reusables/WebsiteHead/WebsiteHead";
 
 export default function Home(props) {
   return (
     <div>
-      <Head>
-        <title>Psiholoģe Vita Apsīte</title>
-        <meta
-          name="description"
-          content="Psiholoģes Vitas Apsītes privātprakse"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <WebsiteHead title="Psiholoģe Vita Apsīte" />
       <WebpageLayout
         openMobileNav={props.openMobileNav}
         setMobileNav={props.setMobileNav}

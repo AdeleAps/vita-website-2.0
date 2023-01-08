@@ -6,6 +6,7 @@ $clr-white: #fff;
 $clr-orange-btn: #eb991b;
 $clr-orange-btn-hover: #e37223;
 $clr-pink-background: #f0c9bc;
+$clr-pink-background-light: #f9e9e4;
 $clr-pink-background-dark: #cb8275;
 $clr-light-gray-text: #a3a8a0;
 $clr-dusty-gray: #727d6d;
@@ -13,12 +14,14 @@ $clr-light-gray: #9f9c9c;
 $clr-error-orange: #e64625;
 $clr-invalid-input: #f9f1ec;
 $clr-error-border: #e64625;
+$clr-blue-ink: rgba(43, 70, 126, 0.8);
 
 // fonts
  $ft-hk-grotesk: "HK-Grotesk-Reg", sans-serif;
  $ft-title: "HK-Grotesk-SemiBold", serif;
  $ft-title-bold: "HK-Grotesk-Bold", serif;
  $ft-esteban: 'Esteban', serif;
+ $ft-handwritten: 'Caveat', cursive;
 
 //breakpoints
 $mobile: 500px;
@@ -29,5 +32,6 @@ $desktop-wide: 1500px;
 //misc
 $transition: all 0.3s ease;
 $mobileNavBorder: 1px solid $clr-brown-hover;
+$boxShadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
 
 

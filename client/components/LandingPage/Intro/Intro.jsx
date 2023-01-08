@@ -6,7 +6,7 @@ const Intro = (props) => {
   return (
     <main className={styles.intro}>
       <div>
-        <img src="./images/intro.jpg" alt="" />
+        <img loading="lazy" src="./images/intro.jpg" alt="Privātprakses kabinets, kas aprīkots smilšu spēles terapijai." />
       </div>
       <div>
         <h1>Psihologa, <br/> ģimenes psihoterapijas speciālista privātprakse.</h1>
