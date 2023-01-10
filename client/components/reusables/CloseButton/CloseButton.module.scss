@@ -1,10 +1,20 @@
 .closeButton {
-  width: 100%;
   text-align: right;
   position: relative;
+  z-index: 0;
+  right: 0;
   bottom: 10px;
   left: 15px;
+  width: 100%;
   img {
     width: 20px;
+  }
+  @media only screen and (min-width: $navTablet) {
+    width: auto;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    right: 3%;
+    top: 5%;
   }
 }

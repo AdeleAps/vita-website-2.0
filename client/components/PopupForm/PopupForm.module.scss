@@ -8,4 +8,11 @@
     span {
         color: $clr-pink-background-dark;
     }
+    @media only screen and (min-width: $navTablet) {
+        p {
+            width: 80%;
+            margin: auto;
+            margin-bottom: 1em;
+        }
+    }
 }
