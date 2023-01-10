@@ -1,21 +1,21 @@
 .experienceBlock {
   display: flex;
   flex-direction: column;
-  width: 85%;
   font-size: 1.05rem;
-  margin: 2rem;
   border: 2px solid $clr-pink-background-light;
   border-radius: 50px;
+  margin: 2rem 0.5rem;
 
   div {
     flex: 50%;
+    padding: 1em;
     &.timeLine {
       display: flex;
       align-items: center;
       &::before {
         content: "";
         display: inline-block;
-        border: 1px solid $clr-pink-background-light;
+        border: 2px solid $clr-pink-background-light;
         height: 100%;
         position: relative;
         left: 62px;
@@ -29,6 +29,7 @@
       justify-content: space-around;
       list-style: none;
       line-height: 1.6em;
+      padding-left: 0;
 
       li {
         display: flex;
@@ -52,31 +53,52 @@
     &:last-child {
       position: relative;
       padding: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .polaroid {
         background-color: $clr-white;
         padding: 1rem 1rem 5rem 1rem;
-        width: 400px;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+        width: 67vw;
         img {
           max-width: 100%;
           object-fit: contain;
-          aspect-ratio: 1 / 1;
         }
         figcaption {
-         text-align: center;
-         font-family: $ft-handwritten;
-         margin: 0.5rem 0;
-         font-size: 1.3em;
-         color: $clr-blue-ink;
+          text-align: center;
+          font-family: $ft-handwritten;
+          margin: 0.5rem 0;
+          font-size: 1.3em;
+          color: $clr-blue-ink;
         }
       }
     }
   }
   &.reverse {
-    flex-direction: row-reverse;
+    flex-direction: column;
+    @media only screen and (min-width: $tablet) {
+      flex-direction: row-reverse;
+    }
   }
-    @media only screen and (min-width: $mobile) {
+  @media only screen and (min-width: $tablet) {
     flex-direction: row;
-    width: 75%;
+    width: 90%;
+    margin: 2rem;
+    div {
+      padding: 0;
+
+      ul {
+        padding-left: 40px;
+      }
+    }
+    div:last-child {
+      .polaroid {
+        width: 400px;
+      }
+    }
+  }
+  @media only screen and (min-width: $desktop-wide) {
+    width: 100%;
   }
 }

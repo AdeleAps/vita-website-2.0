@@ -7,14 +7,36 @@ export const getJobExperienceData = () => {
     experience: [
       {
         listItems: [
-          "Sistēmiskais supervizors apmācībā no 2021.gada.",
-          "Psihologa sertifikāts nr.1100420 izglītības un skolu psiholoģijā.",
-          "Psihologa sertifikāts nr.1300472 klīniskajā un veselības psiholoģijā.",
-          "Psihologa pārrauga sertifikāts nr.1300167 klīniskajā un veselības psiholoģijā.",
-          "Psihologa sertifikāts nr.1500473 konsultatīvajā psiholoģijā.",
+          "No 2018.gada psihologa - psihoterapijas speciālista privātprakse.",
+          "No 2009. psihologa privātprakse.",
+          "2014.-2019. Rīgas Domes IKSD Izglītības atbalsta nodaļas speciāliste eksperte, psihologs.",
+          "2014.-2019. Rīgas Domes IKSD Izglītības atbalsta nodaļas speciāliste eksperte, psihologs.",
+          "2014.-2019. Rīgas Domes IKSD Izglītības atbalsta nodaļas speciāliste eksperte, psihologs.",
         ],
-        photo: "/images/cv-page/izglitiba-1.jpg",
-        photoAltText: "Ekstra garš attēla apraksts, lai pārbaudītu tekstu.",
+        photo: "/images/cv-page/darba-pieredze-1.jpg",
+        photoAltText:
+          "Ekstra garš attēla apraksts, lai pārbaudītu tekstu. Ekstra garš attēla apraksts, lai pārbaudītu tekstu. Ekstra garš attēla apraksts, lai pārbaudītu tekstu. ",
+        photoRotation: "rotate(-1deg)",
+      },
+      {
+        listItems: [
+          "No 2018.gada psihologa - psihoterapijas speciālista privātprakse.",
+          "No 2009. psihologa privātprakse.",
+          "2014.-2019. Rīgas Domes IKSD Izglītības atbalsta nodaļas speciāliste eksperte, psihologs.",
+        ],
+        photo: "/images/cv-page/darba-pieredze-2.jpg",
+        photoAltText: "Apraksts.",
+        photoRotation: "rotate(10deg)",
+      },
+      {
+        listItems: [
+          "No 2018.gada psihologa - psihoterapijas speciālista privātprakse.",
+          "No 2009. psihologa privātprakse.",
+          "2014.-2019. Rīgas Domes IKSD Izglītības atbalsta nodaļas speciāliste eksperte, psihologs.",
+          "2014.-2019. Rīgas Domes IKSD Izglītības atbalsta nodaļas speciāliste eksperte, psihologs.",
+        ],
+        photo: "/images/cv-page/darba-pieredze-3.jpg",
+        photoAltText: "Apraksts.",
       },
     ],
   };

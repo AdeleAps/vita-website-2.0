@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Logo = (props) => {
   return (
-    <Link onClick={props.onClick} href="/">
-      <div className={styles.logo}>placeholder</div>
+    <Link className={styles.logo} onClick={props.onClick} href="/">
+      <div>placeholder</div>
     </Link>
   );
 }

@@ -49,6 +49,7 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -56,4 +57,5 @@ button {
   background-color: inherit;
   border: none;
   font-family: $ft-hk-grotesk;
+  -webkit-tap-highlight-color: transparent;
 }

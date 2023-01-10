@@ -4,8 +4,12 @@
   background-color: transparent;
   height: 1.35em;
   width: 2em;
+  -webkit-tap-highlight-color: transparent;
   @media only screen and (min-width: $navTablet) {
     display: none;
+  }
+  &:focus-visible {
+    outline: none;
   }
   div {
     background-color: black;

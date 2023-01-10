@@ -2,7 +2,6 @@ import "../styles/globals.scss";
 import { useState } from "react";
 import PopupForm from "../components/PopupForm/PopupForm";
 import PopupFeedback from "../components/PopupFeedback/PopupFeedback";
-import { NameContext } from "../utils/context/contexts";
 
 function MyApp({ Component, pageProps }) {
   const [openMobileNav, setMobileNav] = useState(false);
@@ -12,7 +11,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    <NameContext.Provider value={name}></NameContext.Provider>
       <Component
         openMobileNav={openMobileNav}
         setMobileNav={setMobileNav}

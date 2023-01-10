@@ -7,7 +7,7 @@ export const getEducationData = () => {
     experience: [
       {
         listItems: [
-          "Sistēmiskais supervizors apmācībā no 2021.gada.",
+          `Sistēmiskais supervizors apmācībā no 2021.gada.`,
           "Psihologa sertifikāts nr.1100420 izglītības un skolu psiholoģijā.",
           "Psihologa sertifikāts nr.1300472 klīniskajā un veselības psiholoģijā.",
         ],
