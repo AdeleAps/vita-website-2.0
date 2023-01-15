@@ -10,7 +10,7 @@ const PopupFeedback = (props) => {
   return (
     <AnimatePresence intial={false} mode={"wait"} onExitComplete={() => null}>
       {props.feebackPopup && (
-        <Modal
+        <Modal closeButtonClass="feedbackCloseBtn"
           onClick={() => {
             props.setOpenFeedbackPopup(false);
           }}

@@ -1,8 +1,11 @@
 import React from "react";
 import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 import WebsiteHead from "../../components/reusables/WebsiteHead/WebsiteHead";
+import ServicePage from "../../components/ServicePage/ServicePage";
+import { getServiceData } from "../../data/service-page/getServiceData"
 
-const Diagnostika = (props) => {
+const BahaZiedi = (props) => {
+
   return (
     <>
       <WebsiteHead title="Vita Apsīte - Baha Ziedi" />
@@ -11,10 +14,10 @@ const Diagnostika = (props) => {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <div>Baha ziedi page</div>
+        <ServicePage {...getServiceData().bahaZieduTerapija} />
       </WebpageLayout>
     </>
   );
 };
 
-export default Diagnostika;
+export default BahaZiedi;

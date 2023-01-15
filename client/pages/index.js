@@ -11,7 +11,12 @@ export default function Home(props) {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <LandingPage setOpenFormModal={props.setOpenFormModal} />
+        <LandingPage
+          feebackPopup={props.feebackPopup}
+          setOpenFeedbackPopup={props.setOpenFeedbackPopup}
+          setName={props.setName}
+          setOpenFormModal={props.setOpenFormModal}
+        />
       </WebpageLayout>
     </div>
   );

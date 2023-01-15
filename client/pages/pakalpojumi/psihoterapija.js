@@ -1,6 +1,8 @@
 import React from "react";
 import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 import WebsiteHead from "../../components/reusables/WebsiteHead/WebsiteHead";
+import ServicePage from "../../components/ServicePage/ServicePage";
+import { getServiceData } from "../../data/service-page/getServiceData"
 
 const Psihoterapija = (props) => {
   return (
@@ -11,7 +13,7 @@ const Psihoterapija = (props) => {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <div>Ģimenes psihoterapija page</div>
+       <ServicePage {...getServiceData().psihoterapija} />
       </WebpageLayout>
     </>
   );

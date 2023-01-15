@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
         setOpenFormModal={setOpenFormModal}
         setOpenFeedbackPopup={setOpenFeedbackPopup}
         feebackPopup={feebackPopup}
+        setName={setName}
         {...pageProps}
       />
       <PopupForm

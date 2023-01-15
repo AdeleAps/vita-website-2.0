@@ -38,13 +38,13 @@
       padding-top: 1.2em;
       font-family: "HK-Grotesk-Light";
       resize: none;
+      border: none;
       &::placeholder {
         color: $clr-dusty-gray;
         opacity: 60%;
       }
       &:focus {
         outline: none;
-        padding-top: 1em;
         &::placeholder {
           color: transparent;
         }
@@ -53,11 +53,12 @@
     legend {
       color: $clr-brown-hover;
       font-size: 0.7rem;
-      margin-left: 1em;
-      padding-inline: 0.5em;
-      display: none;
+      opacity: 0;
+      transition: all 0.1s ease;
+      position: absolute;
+      bottom: 105%;
       &.active {
-        display: block;
+        opacity: 100%;
       }
     }
     &.error {

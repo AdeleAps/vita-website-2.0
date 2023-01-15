@@ -33,7 +33,7 @@ const Modal = (props) => {
         animate={dropIn.visible}
         exit={dropIn.exit}
       >
-        <CloseButton onClick={props.onClick} />
+        <CloseButton closeButtonClass={props.closeButtonClass} onClick={props.onClick} />
         {props.children}
       </motion.div>
     </ModalBackdrop>

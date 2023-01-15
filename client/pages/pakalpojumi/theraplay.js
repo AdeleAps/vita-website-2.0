@@ -1,6 +1,8 @@
 import React from "react";
 import WebpageLayout from "../../components/reusables/WebpageLayout/WebpageLayout";
 import WebsiteHead from "../../components/reusables/WebsiteHead/WebsiteHead";
+import ServicePage from "../../components/ServicePage/ServicePage";
+import { getServiceData } from "../../data/service-page/getServiceData"
 
 const Theraplay = (props) => {
   return (
@@ -11,7 +13,7 @@ const Theraplay = (props) => {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <div>Theraplay page</div>
+        <ServicePage {...getServiceData().theraplay} />
       </WebpageLayout>
     </>
   );

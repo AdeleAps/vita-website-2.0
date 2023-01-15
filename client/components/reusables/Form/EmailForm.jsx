@@ -6,7 +6,7 @@ import styles from "./EmailForm.module.scss";
 import { useAxios } from "../../../utils/hooks/useAxios";
 
 const EmailForm = (props) => {
-  const { error, fetchData, response } = useAxios();
+  const { fetchData } = useAxios();
 
   const [focus, setFocus] = useState({
     focus: false,
@@ -20,7 +20,7 @@ const EmailForm = (props) => {
         activeField: event.target.name,
       });
     },
-    onBlur: () => {
+    onBlurCapture: () => {
       setFocus({
         focus: false,
         activeField: null,
@@ -56,10 +56,14 @@ const EmailForm = (props) => {
             accept: "*/*",
             "Content-Type": "application/json",
           },
-          data: values
+          data: values,
           // TODO: solve the bug where errors aren't being caught
+
+          // TODO: make the last legend disappear when the form loses focus
         });
-        props.setOpenFormModal(false);
+        if (props.setOpenFormModal) {
+          props.setOpenFormModal(false);
+        }
         props.setName(values.firstName);
         props.setOpenFeedbackPopup(true);
         setSubmitting(false);
@@ -152,7 +156,6 @@ const EmailForm = (props) => {
               value={values.description}
             />
 
-            {/* TODO: fix the height lag when changing legend visibility */}
             <legend
               className={
                 focus.activeField === "description" ? styles.active : ""

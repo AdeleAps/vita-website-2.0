@@ -4,12 +4,17 @@ import LandingFormSection from "./LandingFormSection/LandingFormSection";
 import styles from "./PinkSection.module.scss";
 import ServicesList from "./ServicesList/ServicesList";
 
-const PinkSection = () => {
+const PinkSection = (props) => {
   return (
     <div className={styles.pinkSection}>
       <ServicesList />
       <BioPostIt />
-      <LandingFormSection submitBtn={styles.submitBtn}/>
+      <LandingFormSection
+        feebackPopup={props.feebackPopup}
+        setOpenFeedbackPopup={props.setOpenFeedbackPopup}
+        setName={props.setName}
+        submitBtn={styles.submitBtn}
+      />
     </div>
   );
 };

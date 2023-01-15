@@ -1,7 +1,13 @@
 .popupFeedback {
-    font-size: 2em;
-    padding-bottom: 1.3em;
+  font-size: 2em;
+  padding-bottom: 1em;
+  p {
+    margin: 0;
     .name {
-        color: $clr-pink-background-dark;
+      color: $clr-pink-background-dark;
     }
+  }
+  @media only screen and (min-width: $navTablet) {
+    padding: 1.5em 0;
+  }
 }

@@ -1,0 +1,77 @@
+.servicePage {
+  padding-top: 80px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .description {
+    background-color: $clr-pink-background-light;
+    display: flex;
+    flex-direction: column;
+    .descriptionContainer {
+      padding: 7%;
+      flex: 50%;
+      p {
+        line-height: 1.7em;
+        color: $clr-dusty-gray;
+        padding-bottom: 0;
+      }
+      h2 {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-family: "HK-Grotesk-Bold";
+        font-size: 2.3em;
+        line-height: 1.5em;
+        letter-spacing: 4px;
+        &:after {
+          content: url("/svg/text-divider-service.svg");
+          display: block;
+          width: 4em;
+          opacity: 75%;
+          margin-top: -20px;
+        }
+      }
+    }
+    .imageContainer {
+      flex: auto;
+      padding: 7%;
+      padding-top: 0;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border: 10px solid $clr-white;
+        border-radius: 6px;
+
+      }
+    }
+  }
+  @media only screen and (min-width: $navTablet) {
+    .description {
+      flex-direction: row;
+      .descriptionContainer {
+        h2 {
+          font-size: 3.5em;
+        }
+      }
+      .imageContainer {
+        padding: 0;
+        width: 50%;
+        img {
+          border: none;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: $desktop-wide) {
+    .description .descriptionContainer p {
+      width: 70%;
+    }
+  }
+  .otherServices {
+    background-color: $clr-cream-background;
+    padding: 7%;
+  }
+}

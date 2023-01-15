@@ -8,7 +8,7 @@ const CloseButton = (props) => {
       type="button"
       onClick={props.onClick}
       className={`${styles.closeButton} ${
-        props.className ? styles[className] : ""
+        props.closeButtonClass ? styles[props.closeButtonClass] : ""
       }`}
     >
       <motion.img
