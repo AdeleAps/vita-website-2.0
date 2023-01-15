@@ -37,8 +37,8 @@
       transition-duration: 0.2s;
       padding-top: 1.2em;
       font-family: "HK-Grotesk-Light";
-      resize: none;
       border: none;
+      font-size: 1em;
       &::placeholder {
         color: $clr-dusty-gray;
         opacity: 60%;

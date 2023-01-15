@@ -1,19 +1,22 @@
 import React from "react";
 import styles from "./ServiceCard.module.scss";
 import Button from "../../reusables/Button/Button";
+import Link from "next/link"
 
 const ServiceCard = (props) => {
+
+  console.log(props);
+
   return (
     <div className={styles.serviceCard}>
       <div>
-        <img />
+        <img src={props.imageUrl} alt={props.title} />
       </div>
-      <div>
-        <h3></h3>
-        <p></p>
-        <a href="">
-          <Button />
-        </a>
+      <div className={styles.description}>
+        <h3>{props.title}</h3>
+        <Link href={`/pakalpojumi/${props.slug}`}>
+          <Button className="serviceCardBtn">skatīt</Button>
+        </Link>
       </div>
     </div>
   );

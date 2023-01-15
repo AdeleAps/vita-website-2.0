@@ -47,6 +47,16 @@
       }
     }
   }
+
+  .otherServices {
+    background-color: $clr-cream-background;
+    padding: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+
   @media only screen and (min-width: $navTablet) {
     .description {
       flex-direction: row;
@@ -64,14 +74,13 @@
         }
       }
     }
+    .otherServices {
+      flex-wrap: nowrap;
+    }
   }
   @media only screen and (min-width: $desktop-wide) {
     .description .descriptionContainer p {
       width: 70%;
     }
-  }
-  .otherServices {
-    background-color: $clr-cream-background;
-    padding: 7%;
   }
 }

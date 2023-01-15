@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ServicePage.module.scss";
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard/ServiceCard";
+import { getServiceData } from "../../data/service-page/getServiceData";
 
 const ServicePage = (props) => {
   const fadeInVariant = {
@@ -18,6 +19,14 @@ const ServicePage = (props) => {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
   };
+
+  const filteredServicesList = Object.entries({ ...getServiceData() }).filter(
+    (item) => item[1].slug !== props.slug
+  );
+
+  const servicesCards = filteredServicesList.map((item, index) => (
+    <ServiceCard key={index} {...item[1]} />
+  ));
 
   return (
     <div className={styles.servicePage}>
@@ -40,9 +49,7 @@ const ServicePage = (props) => {
           <img loading="lazy" src={props.imageUrl} alt={props.title} />
         </div>
       </section>
-      <section className={styles.otherServices}>
-        <ServiceCard />
-      </section>
+      <section className={styles.otherServices}>{servicesCards}</section>
     </div>
   );
 };
