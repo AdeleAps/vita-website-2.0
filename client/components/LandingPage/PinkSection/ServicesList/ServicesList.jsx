@@ -11,6 +11,16 @@ class ServiceClass {
 }
 
 const Services = () => {
+  const listVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
   const servicesIcons = [
     "/images/services-icons/services-icon-1.png",
     "/images/services-icons/services-icon-2.png",
@@ -32,21 +42,10 @@ const Services = () => {
     ),
   ];
 
-  // TODO: Refactor framer motion props
   return (
     <section className={styles.servicesList}>
       <h4>Pakalpojumi</h4>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.5,
-          ease: "easeIn",
-          staggerChildren: 0.5,
-        }}
-        viewport={{ once: true }}
-      >
+      <motion.div variants={listVariant} initial="hidden" whileInView="show" viewport={{ once: true }}>
         {services.map((service, index) => (
           <Service
             src={servicesIcons[index]}

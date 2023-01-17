@@ -1,4 +1,5 @@
 import React from "react";
+import ContactsPage from "../components/ContactsPage/ContactsPage";
 import WebpageLayout from "../components/reusables/WebpageLayout/WebpageLayout";
 import WebsiteHead from "../components/reusables/WebsiteHead/WebsiteHead";
 
@@ -11,7 +12,7 @@ const Kontakti = (props) => {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <div>Kontakti page</div>
+        <ContactsPage setOpenFormModal={props.setOpenFormModal} />
       </WebpageLayout>
     </>
   );

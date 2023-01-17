@@ -3,13 +3,19 @@ import styles from "./Service.module.scss";
 import { motion } from "framer-motion";
 
 const Service = (props) => {
+  const listItem = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "linear"
+      },
+    },
+  };
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className={styles.service}
-    >
+    <motion.div className={styles.service} variants={listItem}>
       <div>
         <img src={props.src} />
       </div>

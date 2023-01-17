@@ -205,7 +205,7 @@ const Nav = (props) => {
             </ul>
           </div>
         </li>
-        <li>
+        {/* <li>
           <Link
             onClick={props.openMobileNav && closeNav}
             className={activeLink("/blogs")}
@@ -213,7 +213,7 @@ const Nav = (props) => {
           >
             Blogs
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

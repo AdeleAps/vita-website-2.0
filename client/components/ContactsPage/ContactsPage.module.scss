@@ -1,0 +1,50 @@
+.contactsPage {
+  padding-top: 80px;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: $clr-cream-background;
+  font-size: 1rem;
+  flex-direction: column;
+  & > * {
+    flex: 50%;
+  }
+  .info {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    font-family: $ft-esteban;
+    justify-content: center;
+    h4 {
+      font-size: 1.5em;
+      font-family: $ft-title-bold;
+      margin-top: 0.5em;
+      &:before {
+        content: url("/svg/text-divider-service.svg");
+        margin-bottom: 0.5em;
+        display: block;
+        width: 30%;
+        opacity: 75%;
+      }
+    }
+    span,
+    button,
+    a,
+    textarea {
+      color: $clr-orange-btn-hover;
+      font-size: inherit;
+      font-family: inherit;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+    .number {
+      cursor: pointer;
+      position: relative;
+    }
+  }
+  @media only screen and (min-width: $navTablet) {
+    flex-direction: row;
+  }
+}
