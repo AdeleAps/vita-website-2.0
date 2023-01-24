@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 axios.defaults.baseURL = "http://localhost:1000/api";
 
-export const useAxios = (params) => {
+export const useAxios = () => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,9 @@ export const useAxios = (params) => {
       const result = await axios.request(params);
       setResponse(result.data);
     } catch (error) {
-      setError(error);
+      setError(error, () => 
+        console.log("There has been an error >:(")
+      );
     } finally {
       setLoading(false);
     }

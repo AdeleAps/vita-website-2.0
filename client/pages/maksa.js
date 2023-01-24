@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
+import PricingPage from "../components/PricingPage/PricingPage";
 import WebpageLayout from "../components/reusables/WebpageLayout/WebpageLayout";
 import WebsiteHead from "../components/reusables/WebsiteHead/WebsiteHead";
 
@@ -11,7 +12,7 @@ const Maksa = (props) => {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <div>Maksas page</div>
+        <PricingPage />
       </WebpageLayout>
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
@@ -6,7 +6,7 @@ import styles from "./EmailForm.module.scss";
 import { useAxios } from "../../../utils/hooks/useAxios";
 
 const EmailForm = (props) => {
-  const { fetchData } = useAxios();
+  const { fetchData, error } = useAxios();
 
   const [focus, setFocus] = useState({
     focus: false,
@@ -58,15 +58,12 @@ const EmailForm = (props) => {
           },
           data: values,
           // TODO: solve the bug where errors aren't being caught
-
-          // TODO: make the last legend disappear when the form loses focus
+        }).then(() => {
+          if (props.setOpenFormModal) {
+            props.setOpenFormModal(false);
+          }
+          setSubmitting(false);
         });
-        if (props.setOpenFormModal) {
-          props.setOpenFormModal(false);
-        }
-        props.setName(values.firstName);
-        props.setOpenFeedbackPopup(true);
-        setSubmitting(false);
       }}
     >
       {({ errors, handleBlur, touched, values }) => (
