@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
 import styles from "./EmailForm.module.scss";
 import { useAxios } from "../../../utils/hooks/useAxios";
+import { ErrorStateContext } from "../../../store/ErrorStateContext";
 
 const EmailForm = (props) => {
-  const { fetchData, error } = useAxios();
+  const { setError } = useContext(ErrorStateContext);
+  const { fetchData } = useAxios(setError);
 
   const [focus, setFocus] = useState({
     focus: false,
@@ -57,12 +59,13 @@ const EmailForm = (props) => {
             "Content-Type": "application/json",
           },
           data: values,
-          // TODO: solve the bug where errors aren't being caught
         }).then(() => {
+          setSubmitting(false);
+          props.setName(values.firstName);
           if (props.setOpenFormModal) {
             props.setOpenFormModal(false);
           }
-          setSubmitting(false);
+          props.setOpenFeedbackPopup(true);
         });
       }}
     >
