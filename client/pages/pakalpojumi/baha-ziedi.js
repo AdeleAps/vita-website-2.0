@@ -6,6 +6,7 @@ import { getServiceData } from "../../data/service-page/getServiceData"
 
 const BahaZiedi = (props) => {
 
+// TODO: Dynamically generate the links for all of these, with [this] file-name. Check Next docs.
   return (
     <>
       <WebsiteHead title="Vita Apsīte - Baha Ziedi" />
