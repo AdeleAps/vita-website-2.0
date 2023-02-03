@@ -5,19 +5,15 @@ import ServiceCard from "./ServiceCard/ServiceCard";
 import { getServiceData } from "../../data/service-page/getServiceData";
 
 const ServicePage = (props) => {
-  const fadeInVariant = {
+  const listVariant = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.4,
+        delay: 0.5
       },
     },
-  };
-
-  const paraVariant = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
   };
 
   const filteredServicesList = Object.entries({ ...getServiceData() }).filter(
@@ -28,28 +24,36 @@ const ServicePage = (props) => {
     <ServiceCard key={index} {...item[1]} />
   ));
 
+  // TODO: Make the image adjust to the size of the description.
+
   return (
     <div className={styles.servicePage}>
       <section className={styles.description}>
-        <motion.div
-          variants={fadeInVariant}
-          initial="hidden"
-          animate="show"
-          className={styles.descriptionContainer}
-        >
+        <div className={styles.descriptionContainer}>
           <h2>{props.title}</h2>
 
           {props.description.map((para, index) => (
-            <motion.p variant={paraVariant} key={index}>
+            <p key={index}>
               {para}
-            </motion.p>
+            </p>
           ))}
-        </motion.div>
+        </div>
         <div className={styles.imageContainer}>
-          <img loading="lazy" src={props.imageUrl} alt={props.title} />
+          <img src={props.imageUrl} alt={props.title} />
         </div>
       </section>
-      <section className={styles.otherServices}>{servicesCards}</section>
+      <section className={styles.otherServices}>
+        <h4>Citi pakalpojumi</h4>
+        <motion.div
+          variants={listVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className={styles.servicesWrapper}
+        >
+          {servicesCards}
+        </motion.div>
+      </section>
     </div>
   );
 };

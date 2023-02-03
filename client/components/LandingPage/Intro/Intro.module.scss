@@ -2,6 +2,7 @@
   background-color: $clr-cream-background;
   min-height: 100vh;
   padding-top: 80px;
+  height: 90vh;
   img {
     width: 100%;
     height: 45vh;
@@ -30,8 +31,8 @@
   @media only screen and (min-width: $tablet) {
     display: flex;
     img {
-      height: 100%;
       object-fit: cover;
+      height: 100%;
     }
     div:first-child {
       flex: 50%;

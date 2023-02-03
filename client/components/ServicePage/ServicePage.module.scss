@@ -3,7 +3,6 @@
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   .description {
     background-color: $clr-pink-background-light;
     display: flex;
@@ -36,6 +35,9 @@
       flex: auto;
       padding: 7%;
       padding-top: 0;
+      height: auto;
+      max-height: 100%;
+      overflow: hidden;
 
       img {
         object-fit: cover;
@@ -43,34 +45,59 @@
         width: 100%;
         border: 10px solid $clr-white;
         border-radius: 6px;
-
       }
     }
   }
 
   .otherServices {
     background-color: $clr-cream-background;
-    padding: 7%;
+    padding: 4%;
+    padding-bottom: 7%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 1em;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.7rem;
+      font-weight: 400;
+      font-family: $ft-esteban;
+    }
+    .servicesWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
   }
 
   @media only screen and (min-width: $navTablet) {
     .description {
       flex-direction: row;
+      min-height: 80vh;
       .descriptionContainer {
+        flex: 50%;
         h2 {
-          font-size: 3.5em;
+          font-size: 3em;
+        }
+        p {
+          padding-right: 20%;
         }
       }
       .imageContainer {
         padding: 0;
-        width: 50%;
+        flex: 50%;
+        overflow: hidden;
         img {
           border: none;
           border-radius: 0;
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          height: 100%;
+          max-height: 100%;
+          object-fit: cover;
         }
       }
     }

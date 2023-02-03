@@ -148,13 +148,13 @@ const Nav = (props) => {
           <button onClick={handlePakalpojumiDropdown}>Pakalpojumi</button>
           <div className={styles.dropdownWrapper}>
             <ul className={styles.dropdown}>
-              <li>
+            <li>
                 <Link
                   onClick={closeNav}
-                  className={activeLink("/pakalpojumi/psihoterapija")}
-                  href="/pakalpojumi/psihoterapija"
+                  className={activeLink("/pakalpojumi/diagnostika")}
+                  href="/pakalpojumi/diagnostika"
                 >
-                  Sistēmiskā ģimenes psihoterapija
+                  Psiholoģiskā diagnostika
                 </Link>
               </li>
               <li>
@@ -164,6 +164,15 @@ const Nav = (props) => {
                   href="/pakalpojumi/smilsu-speles"
                 >
                   Smilšu spēles terapijas
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={closeNav}
+                  className={activeLink("/pakalpojumi/psihoterapija")}
+                  href="/pakalpojumi/psihoterapija"
+                >
+                  Sistēmiskā ģimenes psihoterapija
                 </Link>
               </li>
               <li>
@@ -182,15 +191,6 @@ const Nav = (props) => {
                   href="/pakalpojumi/theraplay"
                 >
                   Theraplay®
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={closeNav}
-                  className={activeLink("/pakalpojumi/diagnostika")}
-                  href="/pakalpojumi/diagnostika"
-                >
-                  Psiholoģiskā diagnostika
                 </Link>
               </li>
               <li>

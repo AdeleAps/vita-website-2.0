@@ -6,7 +6,10 @@
     max-height: 18rem;
     img {
       width: 100%;
+      height: 18rem;
       object-fit: cover;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
     }
   }
   div:last-child {
@@ -27,7 +30,7 @@
     box-shadow: $boxShadow;
     flex-direction: row;
     div:first-child {
-      flex: 30%;
+      flex: 40%;
       max-height: none;
       img {
         height: 100%;
