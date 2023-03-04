@@ -2,13 +2,15 @@
   background-color: $clr-cream-background;
   min-height: 100vh;
   padding-top: 80px;
-  height: 90vh;
+  display: flex;
+  flex-direction: row-reverse;
   img {
     width: 100%;
     height: 45vh;
     object-fit: cover;
   }
-  div:last-child {
+  
+  .descriptionWrapper {
     padding: 5em 2em;
     font-family: $ft-hk-grotesk;
     display: flex;
@@ -30,14 +32,19 @@
   }
   @media only screen and (min-width: $tablet) {
     display: flex;
-    img {
-      object-fit: cover;
-      height: 100%;
-    }
-    div:first-child {
+    height: 90vh;
+    .carouselWrapper {
       flex: 50%;
+      img {
+        height: 100%;
+      }
+      ul.control-dots li.dot {
+        position: absolute;
+        height: 8px !important;
+        bottom: 0;
+      }
     }
-    div:last-child {
+    .descriptionWrapper {
       padding: 5em;
       flex: 50%;
       h1 {
@@ -49,7 +56,7 @@
     }
   }
   @media only screen and (min-width: $navTablet) {
-    div:last-child {
+    .descriptionWrapper {
       padding-right: 20em;
       padding-bottom: 2em;
       h1 {
@@ -58,10 +65,10 @@
     }
   }
   @media only screen and (min-width: $desktop-wide) {
-    div:last-child {
-      padding-right: 25em;
+    .descriptionWrapper {
+      padding-right: 20em;
       h1 {
-        width: 75%;
+        line-height: 3.9rem;
         font-size: 3vw;
       }
       p {

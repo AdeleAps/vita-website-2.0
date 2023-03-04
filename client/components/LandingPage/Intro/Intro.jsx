@@ -1,15 +1,43 @@
 import React from "react";
 import styles from "./Intro.module.scss";
 import Button from "../../reusables/Button/Button";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import carouselStyles from "./Carousel.module.scss";
 
 const Intro = (props) => {
   return (
     <main className={styles.intro}>
-      <div>
-        <img loading="lazy" src="./images/intro.jpg" alt="Privātprakses kabinets, kas aprīkots smilšu spēles terapijai." />
+      <div className={styles.carouselWrapper}>
+        <Carousel
+          className={carouselStyles.carousel}
+          showArrows={false}
+          showThumbs={false}
+          showStatus={false}
+          autoPlay={false}
+          interval={5000}
+          stopOnHover={false}
+          infiniteLoop={true}
+          aria-label="Privātprakses attēlu galerija"
+        >
+          <div>
+            <img
+              src="./images/intro-carousel/intro1.jpg"
+              alt="Vitas Apsītes privātprakse."
+            />
+          </div>
+          <div>
+            <img
+              src="./images/intro-carousel/intro2.jpg"
+              alt="Vitas Apsītes privātprakse."
+            />
+          </div>
+        </Carousel>
       </div>
-      <div>
-        <h1>Psihologa, <br/> ģimenes psihoterapijas speciālista privātprakse.</h1>
+      <div className={styles.descriptionWrapper}>
+        <h1>
+          Psihologa, <br /> ģimenes psihoterapijas speciālista privātprakse.
+        </h1>
         <p>
           Esmu sertificēta psiholoģe (izglītības un skolu, klīniskā un
           veselības, konsultatīvā psiholoģijā), Latvijas Smilšu spēles terapijas
