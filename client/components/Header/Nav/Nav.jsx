@@ -97,7 +97,7 @@ const Nav = (props) => {
           } ${props.openMobileNav ? `${styles.mobileDropdown}` : ""}`}
           ref={izglitibaRef}
         >
-          <button onClick={handleIzglitibaDropdown}>Izglītība/pieredze</button>
+          <button onClick={handleIzglitibaDropdown}>Izglītība un pieredze</button>
           <div className={styles.dropdownWrapper}>
             <ul className={styles.dropdown}>
               <li>

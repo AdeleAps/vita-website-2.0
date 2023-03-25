@@ -1,10 +1,10 @@
 .button {
   background-color: $clr-pink-accent;
   color: $clr-font-header;
-  border-radius: 3px;
-  letter-spacing: 1px;
-  padding: 0.9em 3.2em;
+  border-radius: 5px;
+  padding: 0.6em 2.5em;
   transition: $transition;
+  font-size: inherit;
   &:hover {
     background-color: $clr-pink-accent-hover;
   }
@@ -16,7 +16,10 @@
   }
   &.introBtn {
     max-width: max-content;
+    font-size: 20px;
+    padding-inline: 2.2em;
   }
+
   &.submitBtn {
     width: 100%;
     font-size: 0.9em;

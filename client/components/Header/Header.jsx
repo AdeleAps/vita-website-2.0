@@ -30,7 +30,7 @@ const Header = (props) => {
         }}
         className="navBtn"
       >
-        Pieteikties
+        Pieteikt vizīti
       </Button>
       <MobileNavBtn
         className={props.openMobileNav ? "active" : ""}

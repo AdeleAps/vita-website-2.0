@@ -1,5 +1,5 @@
 .intro {
-  background-color: $clr-cream-background;
+  background-color: $clr-pink-background;
   min-height: 100vh;
   padding-top: 80px;
   display: flex;
@@ -20,11 +20,14 @@
       font-size: 3em;
       margin: 0;
       font-family: $font-title;
-      line-height: 65px;
+      line-height: 60px;
+      font-weight: 300;
     }
     p {
       font-size: 1rem;
       line-height: 1.4em;
+      padding-top: 0.3em;
+      padding-bottom: 1.1em;
     }
   }
   @media only screen and (min-width: $tablet) {
@@ -44,9 +47,6 @@
     .descriptionWrapper {
       padding: 2.2em;
       flex: 50%;
-      h1 {
-        font-size: 3.5em;
-      }
       p {
         line-height: 1.5em;
       }
@@ -55,16 +55,12 @@
   @media only screen and (min-width: $navTablet) {
     .descriptionWrapper {
       padding-bottom: 2em;
-      h1 {
-        font-size: 3em;
-      }
+      padding-right: 3em;
+
     }
   }
   @media only screen and (min-width: $desktop-wide) {
     .descriptionWrapper {
-      h1 {
-        font-size: 3vw;
-      }
       p {
         font-size: 1.1vw;
       }

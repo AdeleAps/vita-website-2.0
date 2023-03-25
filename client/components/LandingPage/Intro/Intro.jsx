@@ -35,8 +35,8 @@ const Intro = (props) => {
         </Carousel>
       </div>
       <div className={styles.descriptionWrapper}>
-        <h1>
-          Kur komforts satiekas ar rūpēm - Vitas Apsītes psiholoģijas privātpraksē.
+      
+       <h1>  Kur komforts satiekas <br/> ar rūpēm - Vitas Apsītes psiholoģijas privātpraksē.
         </h1>
         <p>
           Sertificēta psiholoģe (izglītības un skolu, klīniskā un
@@ -52,7 +52,7 @@ const Intro = (props) => {
           type="button"
           className="introBtn"
         >
-          Pieteikties
+          Pieteikt vizīti
         </Button>
       </div>
     </main>
