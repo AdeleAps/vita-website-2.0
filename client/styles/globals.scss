@@ -1,31 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Caveat&family=Esteban&display=swap');
-@font-face {
-  font-family: "HK-Grotesk-Reg";
-  src: url("/fonts/HK-Grotesk/HKGrotesk-Regular.otf");
-}
-@font-face {
-  font-family: "HK-Grotesk-Light";
-  src: url("/fonts/HK-Grotesk/HKGrotesk-Light.otf");
-}
-@font-face {
-  font-family: "HK-Grotesk-SemiBold";
-  src: url("/fonts/HK-Grotesk/HKGrotesk-SemiBold.otf");
-}
-
-@font-face {
-  font-family: "HK-Grotesk-Bold";
-  src: url("/fonts/HK-Grotesk/HKGrotesk-Bold.otf");
-}
-
-@font-face {
-  font-family: "HK-Grotesk-Black";
-  src: url("/fonts/HK-Grotesk/HKGrotesk-Black.otf");
-}
-
-@font-face {
-  font-family: "Windsor Bold";
-  src: url("/fonts/Windsor-Bold/Windsor BOLD.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Open+Sans&display=swap');
 
 * {
   box-sizing: border-box;
@@ -39,8 +12,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: $ft-hk-grotesk;
-  color: $clr-black;
+  font-family: 'Open Sans', sans-serif;
+  color: $clr-background-aubergine;
   font-size: 16px;
 }
 
@@ -55,7 +28,6 @@ button {
   cursor: pointer;
   background-color: inherit;
   border: none;
-  font-family: $ft-hk-grotesk;
   -webkit-tap-highlight-color: transparent;
 }
 

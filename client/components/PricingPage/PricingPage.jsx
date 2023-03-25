@@ -68,6 +68,106 @@ const PricingPage = () => {
               60 EUR
             </div>
           </li>
+          <li className={styles["table-row"]}>
+            <div
+              className={`${styles.col} ${styles["col-1"]}`}
+              data-label="PAKALPOJUMS"
+            >
+              Traumu terapija - EMDR metode
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-2"]}`}
+              data-label="ILGUMS"
+            >
+              90 min.
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-3"]}`}
+              data-label="CENA"
+            >
+              60 EUR
+            </div>
+          </li>
+          <li className={styles["table-row"]}>
+            <div
+              className={`${styles.col} ${styles["col-1"]}`}
+              data-label="PAKALPOJUMS"
+            >
+              Traumu terapija - EMDR metode
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-2"]}`}
+              data-label="ILGUMS"
+            >
+              90 min.
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-3"]}`}
+              data-label="CENA"
+            >
+              60 EUR
+            </div>
+          </li>
+          <li className={styles["table-row"]}>
+            <div
+              className={`${styles.col} ${styles["col-1"]}`}
+              data-label="PAKALPOJUMS"
+            >
+              Traumu terapija - EMDR metode
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-2"]}`}
+              data-label="ILGUMS"
+            >
+              90 min.
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-3"]}`}
+              data-label="CENA"
+            >
+              60 EUR
+            </div>
+          </li>
+          <li className={styles["table-row"]}>
+            <div
+              className={`${styles.col} ${styles["col-1"]}`}
+              data-label="PAKALPOJUMS"
+            >
+              Traumu terapija - EMDR metode
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-2"]}`}
+              data-label="ILGUMS"
+            >
+              90 min.
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-3"]}`}
+              data-label="CENA"
+            >
+              60 EUR
+            </div>
+          </li>
+          <li className={styles["table-row"]}>
+            <div
+              className={`${styles.col} ${styles["col-1"]}`}
+              data-label="PAKALPOJUMS"
+            >
+              Traumu terapija - EMDR metode
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-2"]}`}
+              data-label="ILGUMS"
+            >
+              90 min.
+            </div>
+            <div
+              className={`${styles.col} ${styles["col-3"]}`}
+              data-label="CENA"
+            >
+              60 EUR
+            </div>
+          </li>
         </ul>
       </div>
     </div>

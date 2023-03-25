@@ -7,10 +7,11 @@
     li > * {
       font-size: 1rem;
       font-weight: 600;
-      font-family: $ft-hk-grotesk;
       padding: 0.8em;
+      color: $clr-font-header;
     }
     .dropdown {
+      position: relative;
       &:hover:not(.mobileDropdown),
       &.activeDropdown {
         button::after {
@@ -22,11 +23,12 @@
           display: block;
           position: absolute;
           padding: 0.8em;
-          background-color: $clr-white;
+          background-color: $clr-background-aubergine;
           width: 350px;
           border-radius: 8px;
           animation: fadeInAnimation ease 0.5s;
           z-index: 5;
+          left: -14px;
           .dropdown {
             flex-direction: column;
             align-items: flex-start;
@@ -51,8 +53,8 @@
           width: 6px;
           transform: rotate(-45deg) translateY(-100%);
           transform-origin: center;
-          border-bottom: 2px solid $clr-black;
-          border-left: 2px solid $clr-black;
+          border-bottom: 2px solid $clr-font-header;
+          border-left: 2px solid $clr-font-header;
           transition: all 0.2s ease;
         }
       }
@@ -64,7 +66,7 @@
       transition: $transition;
       &:hover,
       &.active {
-        color: $clr-brown-hover;
+        color: $clr-salmon;
       }
     }
   }
@@ -78,7 +80,7 @@
     position: absolute;
     top: 80px;
     left: 0;
-    background-color: $clr-white;
+    background-color: $clr-background-aubergine;
     width: 100%;
     ul {
       flex-direction: column;
@@ -124,7 +126,6 @@
           padding: 0;
           width: 100%;
           text-align: left;
-          color: $clr-black;
           -webkit-tap-highlight-color: transparent;
 
           &::after {

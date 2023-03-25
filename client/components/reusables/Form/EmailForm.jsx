@@ -146,6 +146,8 @@ const EmailForm = (props) => {
               styles.description
             }`}
           >
+
+          {/* TODO: Fix margin  */}
             <Field
               {...inputFocusProps}
               placeholder="Apraksts"

@@ -1,7 +1,6 @@
 .bioNote {
   display: flex;
   flex-direction: column;
-  font-family: "HK-Grotesk-Light";
   div:first-child {
     max-height: 18rem;
     img {
@@ -18,7 +17,6 @@
     h5 {
       margin-top: 0.5em;
       font-size: 2rem;
-      font-family: "HK-Grotesk-SemiBold";
       font-weight: 500;
       margin-bottom: 0;
     }

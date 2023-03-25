@@ -1,13 +1,12 @@
 .button {
-  background-color: $clr-orange-btn;
-  color: $clr-white;
-  border-radius: 8px;
-  font-size: 0.8rem;
+  background-color: $clr-pink-accent;
+  color: $clr-font-header;
+  border-radius: 3px;
   letter-spacing: 1px;
-  padding: 0.9em 2.75em;
+  padding: 0.9em 3.2em;
   transition: $transition;
   &:hover {
-    background-color: $clr-orange-btn-hover;
+    background-color: $clr-pink-accent-hover;
   }
   &.navBtn {
     display: none;
@@ -16,12 +15,7 @@
     }
   }
   &.introBtn {
-    padding-inline: 6em;
-    font-size: 0.9rem;
     max-width: max-content;
-    @media only screen and (min-width: $navTablet) {
-      display: none;
-    }
   }
   &.submitBtn {
     width: 100%;

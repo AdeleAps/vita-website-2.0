@@ -4,7 +4,6 @@
   position: relative;
   flex: 60%;
   fieldset {
-    font-family: $ft-title;
     font-size: 0.9em;
     letter-spacing: 0.5px;
     border-radius: 5px;
@@ -36,7 +35,6 @@
       transition: all;
       transition-duration: 0.2s;
       padding-top: 1.2em;
-      font-family: "HK-Grotesk-Light";
       border: none;
       font-size: 0.9rem;
       &::placeholder {
@@ -82,7 +80,6 @@
     position: relative;
     bottom: 20px;
     left: 18px;
-    font-family: "HK-Grotesk-Bold";
     letter-spacing: 0.5px;
     font-size: 0.7em;
     color: $clr-error-border;

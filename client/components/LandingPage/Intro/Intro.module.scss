@@ -12,20 +12,17 @@
   
   .descriptionWrapper {
     padding: 5em 2em;
-    font-family: $ft-hk-grotesk;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     h1 {
-      font-family: $ft-title;
       font-size: 2.5em;
       max-width: 80%;
       margin: 0;
       font-weight: 500;
     }
     p {
-      font-family: $ft-esteban;
       font-size: 1rem;
       line-height: 1.4em;
     }
@@ -60,7 +57,7 @@
       padding-right: 20em;
       padding-bottom: 2em;
       h1 {
-        font-size: 3.5em;
+        font-size: 2.4em;
       }
     }
   }

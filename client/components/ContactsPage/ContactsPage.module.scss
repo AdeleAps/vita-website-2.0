@@ -12,11 +12,9 @@
     padding: 5%;
     display: flex;
     flex-direction: column;
-    font-family: $ft-esteban;
     justify-content: center;
     h4 {
       font-size: 2em;
-      font-family: $ft-title-bold;
       margin-top: 0.5em;
       &:before {
         content: url("/svg/text-divider-service.svg");
@@ -32,7 +30,6 @@
     textarea {
       color: $clr-orange-btn-hover;
       font-size: inherit;
-      font-family: inherit;
     }
     p {
       font-size: 1rem;

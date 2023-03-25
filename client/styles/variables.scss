@@ -15,14 +15,17 @@ $clr-error-orange: #e64625;
 $clr-invalid-input: #f9f1ec;
 $clr-error-border: #e64625;
 $clr-blue-ink: rgba(43, 70, 126, 0.8);
+$clr-background-aubergine: #290023;
+$clr-font-white: #FCFCEE;
+$clr-font-header: #EFD2D4;
+$clr-pink-accent: #AF1B3F;
+$clr-pink-accent-hover: #8D1634;
+$clr-salmon: #E2B1A1;
+$clr-purple: #520045;
 
-// fonts
- $ft-hk-grotesk: "HK-Grotesk-Reg", sans-serif;
- $ft-title: "HK-Grotesk-SemiBold", serif;
- $ft-title-bold: "HK-Grotesk-Bold", serif;
- $ft-title-extra-bold: "HK-Grotesk-Black", serif;
- $ft-esteban: 'Esteban', serif;
- $ft-handwritten: 'Caveat', cursive;
+//fonts
+
+$font-title: 'Gotu', sans-serif;
 
 //breakpoints
 $mobile: 500px;
