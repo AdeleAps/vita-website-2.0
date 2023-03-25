@@ -36,10 +36,10 @@ const Intro = (props) => {
       </div>
       <div className={styles.descriptionWrapper}>
         <h1>
-          Psihologa, <br /> ģimenes psihoterapijas speciālista privātprakse.
+          Kur komforts satiekas ar rūpēm - Vitas Apsītes psiholoģijas privātpraksē.
         </h1>
         <p>
-          Esmu sertificēta psiholoģe (izglītības un skolu, klīniskā un
+          Sertificēta psiholoģe (izglītības un skolu, klīniskā un
           veselības, konsultatīvā psiholoģijā), Latvijas Smilšu spēles terapijas
           biedrības sertificēta praktizētāja kopš 2007. gada, Latvijas
           Psihoterapeitu biedrības sertificēta psihoterapijas speciāliste
