@@ -5,7 +5,6 @@ $clr-cream-background: #f9eecf;
 $clr-white: #fff;
 $clr-orange-btn: #eb991b;
 $clr-orange-btn-hover: #e37223;
-$clr-pink-background: #EFD2D4;
 $clr-pink-background-light: #f9e9e4;
 $clr-pink-background-dark: #cb8275;
 $clr-light-gray-text: #a3a8a0;
@@ -15,6 +14,9 @@ $clr-error-orange: #e64625;
 $clr-invalid-input: #f9f1ec;
 $clr-error-border: #e64625;
 $clr-blue-ink: rgba(43, 70, 126, 0.8);
+
+// new design
+$clr-pink-background: #EFD2D4;
 $clr-background-aubergine: #290023;
 $clr-font-white: #FCFCEE;
 $clr-font-header: #EFD2D4;
@@ -24,7 +26,6 @@ $clr-salmon: #E2B1A1;
 $clr-purple: #520045;
 
 //fonts
-
 $font-title: 'Gotu', sans-serif;
 
 //breakpoints
@@ -36,7 +37,7 @@ $desktop-wide: 1500px;
 
 //misc
 $transition: all 0.3s ease;
-$mobileNavBorder: 1px solid $clr-brown-hover;
+$mobileNavBorder: 1px solid $clr-salmon;
 $boxShadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
 
 

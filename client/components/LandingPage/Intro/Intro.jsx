@@ -14,11 +14,13 @@ const Intro = (props) => {
           showArrows={false}
           showThumbs={false}
           showStatus={false}
-          autoPlay={false}
-          interval={5000}
+          autoPlay={true}
+          interval={10000}
           stopOnHover={false}
           infiniteLoop={true}
+          showIndicators={false}
           aria-label="Privātprakses attēlu galerija"
+          transitionTime={500}
         >
           <div>
             <img
@@ -32,11 +34,17 @@ const Intro = (props) => {
               alt="Vitas Apsītes privātprakse."
             />
           </div>
+          <div>
+            <img
+              src="./images/intro-carousel/intro3.jpg"
+              alt="Vitas Apsītes privātprakse."
+            />
+          </div>
         </Carousel>
       </div>
       <div className={styles.descriptionWrapper}>
       
-       <h1>  Kur komforts satiekas <br/> ar rūpēm - Vitas Apsītes psiholoģijas privātpraksē.
+       <h1>  Kur komforts satiekas <br/> ar rūpēm - Vitas Apsītes psiholoģijas privātpraksē
         </h1>
         <p>
           Sertificēta psiholoģe (izglītības un skolu, klīniskā un

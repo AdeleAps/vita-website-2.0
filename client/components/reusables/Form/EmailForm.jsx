@@ -146,8 +146,6 @@ const EmailForm = (props) => {
               styles.description
             }`}
           >
-
-          {/* TODO: Fix margin  */}
             <Field
               {...inputFocusProps}
               placeholder="Apraksts"
@@ -159,9 +157,9 @@ const EmailForm = (props) => {
             />
 
             <legend
-              className={
+              className={`${
                 focus.activeField === "description" ? styles.active : ""
-              }
+              } ${styles.description}`}
               htmlFor="description"
             >
               Apraksts

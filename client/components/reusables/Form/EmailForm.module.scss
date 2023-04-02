@@ -57,6 +57,9 @@
       bottom: 105%;
       &.active {
         opacity: 100%;
+        &.description {
+          bottom: 102%;
+        }
       }
     }
     &.error {

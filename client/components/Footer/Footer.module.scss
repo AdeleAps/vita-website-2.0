@@ -1,39 +1,50 @@
 .footer {
-    color: $clr-light-gray-text;
+  color: $clr-light-gray-text;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 0.9rem;
+
+  a.email {
+    line-height: 10px;
+    border-bottom: $clr-background-aubergine solid 1px;
+  }
+
+  div:first-child {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  div.portfolioLinks {
     display: flex;
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-
-    a.email{
-        line-height: 10px;
-        border-bottom: $clr-black solid 1px;
+    flex-direction: row !important;
+    a:hover {
+        transition: $transition;
+        color: $clr-salmon;
     }
+  }
 
-    div:first-child {
-        text-align: center;
-        font-size: 1.15em;
-        margin-bottom: 1em;
+  div:not(:first-child) {
+    span {
+      margin-right: 1rem;
+      position: relative;
+      top: 1px;
     }
-
-    div:last-child {
-        span {
-            margin-right: 1rem;
-            position: relative;
-            top: 1px;
-        }
-        @media only screen and (max-width: $mobile) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5em;
-            span {
-                margin-right: 0;
-            }
-        }
+    @media only screen and (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      a.email {
+        line-height: 17px;
+      }
+      span {
+        margin-right: 0;
+      }
     }
-
+  }
 }

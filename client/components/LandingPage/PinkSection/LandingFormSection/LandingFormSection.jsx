@@ -6,7 +6,7 @@ const LandingFormSection = (props) => {
   return (
     <div className={styles.landingFormSection}>
       <div className={styles.textContainer}>
-        <h4>Piesakieties <br /> uz konsultāciju.</h4>
+        <h4>Piesakieties <br /> uz konsultāciju</h4>
         <p>
           Aizpildiet pieteikuma anketu, sniedzot īsu aprakstu par konsultācijas
           iemeslu.

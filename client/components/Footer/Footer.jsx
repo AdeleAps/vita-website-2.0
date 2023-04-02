@@ -26,6 +26,18 @@ const Footer = (props) => {
           vita.psihologs@gmail.com
         </a>
       </div>
+      <div className={styles.portfolioLinks}>
+        <span>
+          <a  href="">
+            WEB IZSTRĀDE
+          </a>
+        </span>
+        <span>
+          <a href="">
+            DIZAINS
+          </a>
+        </span>
+      </div>
     </footer>
   );
 };

@@ -97,7 +97,9 @@ const Nav = (props) => {
           } ${props.openMobileNav ? `${styles.mobileDropdown}` : ""}`}
           ref={izglitibaRef}
         >
-          <button onClick={handleIzglitibaDropdown}>Izglītība un pieredze</button>
+          <button onClick={handleIzglitibaDropdown}>
+            Izglītība un pieredze
+          </button>
           <div className={styles.dropdownWrapper}>
             <ul className={styles.dropdown}>
               <li>
@@ -121,24 +123,6 @@ const Nav = (props) => {
             </ul>
           </div>
         </li>
-        <li>
-          <Link
-            onClick={props.openMobileNav && closeNav}
-            className={activeLink("/kontakti")}
-            href="/kontakti"
-          >
-            Kontakti
-          </Link>
-        </li>
-        <li>
-          <Link
-            onClick={props.openMobileNav && closeNav}
-            className={activeLink("/maksa")}
-            href="/maksa"
-          >
-            Maksa
-          </Link>
-        </li>
         <li
           className={`${styles.dropdown} ${
             dropdown.pakalpojumi ? `${styles.activeDropdown}` : ""
@@ -148,7 +132,7 @@ const Nav = (props) => {
           <button onClick={handlePakalpojumiDropdown}>Pakalpojumi</button>
           <div className={styles.dropdownWrapper}>
             <ul className={styles.dropdown}>
-            <li>
+              <li>
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/diagnostika")}
@@ -204,6 +188,24 @@ const Nav = (props) => {
               </li>
             </ul>
           </div>
+        </li>
+        <li>
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/maksa")}
+            href="/maksa"
+          >
+            Maksa
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={props.openMobileNav && closeNav}
+            className={activeLink("/kontakti")}
+            href="/kontakti"
+          >
+            Kontakti
+          </Link>
         </li>
         {/* <li>
           <Link

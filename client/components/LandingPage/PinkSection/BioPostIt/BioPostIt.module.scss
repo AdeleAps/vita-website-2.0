@@ -1,50 +1,53 @@
 .bioNote {
   display: flex;
   flex-direction: column;
+  height: min-content;
   div:first-child {
-    max-height: 18rem;
     img {
       width: 100%;
-      height: 18rem;
+      height: 100%;
       object-fit: cover;
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
     }
   }
   div:last-child {
-    background-color: $clr-cream-background;
-    padding: 1em;
+    background-color: $clr-pink-background;
+    padding: 2em;
+    padding-top: 4.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     h5 {
-      margin-top: 0.5em;
-      font-size: 2rem;
+      margin-top: 0.3em;
+      font-size: 2.2rem;
       margin-bottom: 0;
+      font-family: $font-title;
+      font-weight: 400;
     }
     p {
       text-align: left;
     }
+    &::before {
+      content: '“';
+      position: absolute;
+      top: 0;
+      left: 0.3em;
+      font-size: 6.5em;
+      font-family: $font-title;
+    }
   }
   @media only screen and (min-width: 550px) {
-    // change to dark pink
     box-shadow: $boxShadow;
     flex-direction: row;
-    div:first-child {
-      flex: 40%;
-      max-height: none;
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
     div:last-child {
-      flex: 70%;
-      padding: 2.5em;
+      padding: 1.5em 4em;
+      padding-top: 4.5em;
     }
   }
   @media only screen and (min-width: $navTablet) {
-    max-width: 85%;
+    max-width: 90%;
     margin: auto;
-  }
-  p {
-    font-size: 1.1rem;
   }
 }

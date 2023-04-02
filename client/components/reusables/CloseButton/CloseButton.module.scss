@@ -8,6 +8,7 @@
   width: 100%;
   img {
     width: 20px;
+    filter: invert(12%) sepia(99%) saturate(2711%) hue-rotate(331deg) brightness(91%) contrast(94%);
   }
   @media only screen and (min-width: $navTablet) {
     width: auto;
@@ -15,9 +16,9 @@
     bottom: auto;
     left: auto;
     right: 3%;
-    top: 5%;
+    top: 4%;
   }
   &.feedbackCloseBtn {
-    top: 15%;
+    top: 10%;
   }
 }

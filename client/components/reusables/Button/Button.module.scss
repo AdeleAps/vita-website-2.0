@@ -18,13 +18,15 @@
     max-width: max-content;
     font-size: 20px;
     padding-inline: 2.2em;
+    @media only screen and (max-width: $mobile) {
+      align-self: center;
+    }
   }
 
   &.submitBtn {
     width: 100%;
-    font-size: 0.9em;
     @media only screen and (min-width: $mobile) {
-      width: 35%;
+      width: 30%;
     }
     @media only screen and (min-width: $desktop-wide) {
       width: 20%;
