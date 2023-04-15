@@ -22,9 +22,9 @@ const Services = () => {
   };
 
   const servicesIcons = [
-    "/images/services-icons/services-icon-1.png",
-    "/images/services-icons/services-icon-2.png",
-    "/images/services-icons/services-icon-3.png",
+    "/images/services-icons/services-icon-1.svg",
+    "/images/services-icons/services-icon-2.svg",
+    "/images/services-icons/services-icon-3.svg",
   ];
 
   const services = [
