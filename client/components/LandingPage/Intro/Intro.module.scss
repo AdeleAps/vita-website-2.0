@@ -9,7 +9,7 @@
     height: 45vh;
     object-fit: cover;
   }
-  
+
   .descriptionWrapper {
     padding: 5em 2em;
     display: flex;
@@ -33,7 +33,6 @@
   @media only screen and (min-width: $tablet) {
     display: flex;
     flex-direction: row-reverse;
-    height: 40vh;
     .carouselWrapper {
       flex: 50%;
       img {
@@ -57,9 +56,9 @@
     .descriptionWrapper {
       padding-bottom: 2em;
       padding-right: 3em;
-
     }
   }
+
   @media only screen and (min-width: $desktop-wide) {
     .descriptionWrapper {
       p {
