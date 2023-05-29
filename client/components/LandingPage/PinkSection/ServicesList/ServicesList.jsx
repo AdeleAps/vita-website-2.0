@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./ServicesList.module.scss";
 import Service from "./Service/Service";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 class ServiceClass {
   constructor(title, description) {
@@ -11,6 +11,9 @@ class ServiceClass {
 }
 
 const Services = () => {
+  const listRef = useRef(null);
+  const controls = useAnimation();
+
   const listVariant = {
     hidden: { opacity: 0 },
     show: {
@@ -22,9 +25,9 @@ const Services = () => {
   };
 
   const servicesIcons = [
-    "/images/services-icons/services-icon-1.svg",
-    "/images/services-icons/services-icon-2.svg",
-    "/images/services-icons/services-icon-3.svg",
+    "/images/services-icons/services-icon-1.png",
+    "/images/services-icons/services-icon-2.png",
+    "/images/services-icons/services-icon-3.png",
   ];
 
   const services = [
@@ -42,10 +45,42 @@ const Services = () => {
     ),
   ];
 
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          controls.start("show");
+        }
+      });
+    }, options);
+
+    if (listRef.current) {
+      observer.observe(listRef.current);
+    }
+
+    return () => {
+      if (listRef.current) {
+        observer.unobserve(listRef.current);
+      }
+    };
+  }, [controls]);
+
   return (
     <section className={styles.servicesList}>
       <h4>Pakalpojumi</h4>
-      <motion.div variants={listVariant} initial="hidden" whileInView="show" viewport={{ once: true }}>
+      <motion.div
+        ref={listRef}
+        variants={listVariant}
+        initial="hidden"
+        animate={controls}
+        className={styles.servicesList}
+      >
         {services.map((service, index) => (
           <Service
             src={servicesIcons[index]}

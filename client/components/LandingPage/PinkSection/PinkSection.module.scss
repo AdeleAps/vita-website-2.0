@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: 5em;
     @media only screen and (min-width: $navTablet) {
-        padding: 5rem 8rem;
+        padding: 5rem 18%;
+        padding-top: 3rem;
     }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Service.module.scss";
 import { motion } from "framer-motion";
 
@@ -10,7 +10,7 @@ const Service = (props) => {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "linear"
+        ease: "linear",
       },
     },
   };
