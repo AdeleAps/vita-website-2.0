@@ -1,14 +1,14 @@
 .bioNote {
   display: flex;
   flex-direction: column;
+  width: 62vw;
+  margin: auto;
   height: min-content;
   div:first-child {
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
     }
   }
   div:last-child {
@@ -17,7 +17,6 @@
     padding-top: 4.5em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
     h5 {
       margin-top: 0.3em;
@@ -30,7 +29,7 @@
       text-align: left;
     }
     &::before {
-      content: '“';
+      content: "“";
       position: absolute;
       top: 0;
       left: 0.3em;
@@ -38,7 +37,7 @@
       font-family: $font-title;
     }
   }
-  @media only screen and (min-width: 550px) {
+  @media only screen and (min-width: 1000px) {
     box-shadow: $boxShadow;
     flex-direction: row;
     div:last-child {
@@ -46,8 +45,12 @@
       padding-top: 4.5em;
     }
   }
-  @media only screen and (min-width: $navTablet) {
-    max-width: 90%;
-    margin: auto;
+
+  @media only screen and (min-width: $desktop-wide) {
+    height: 470px;
+  }
+
+  @media only screen and (min-width: $desktop-ultrawide) {
+    height: 430px;
   }
 }
