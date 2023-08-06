@@ -31,7 +31,7 @@
           border-radius: 8px;
           animation: fadeInAnimation ease 0.5s;
           z-index: 5;
-          left: -14px; 
+          left: -14px;
           .dropdown {
             flex-direction: column;
             align-items: flex-start;
@@ -81,6 +81,13 @@
     flex-grow: 1;
   }
 
+  @media only screen and (min-width: $desktop) {
+    ul {
+      margin-right: 3rem;
+      gap: 3rem;
+    }
+  }
+
   // mobile nav
   &.mobileNav {
     display: block;
@@ -96,6 +103,7 @@
       align-items: flex-start;
       padding: 2em;
       overflow-y: visible;
+      gap: 0rem;
       li {
         width: 100%;
         border-bottom: $mobileNavBorder;

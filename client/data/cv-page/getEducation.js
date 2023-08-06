@@ -1,6 +1,6 @@
 export const getEducationData = () => {
   return {
-    title: "IZGLĪTĪBA / SERTIFIKĀCIJA",
+    title: "Izglītība un sertifikācija",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     backgroundImage: "url(./images/sand-background.jpg)",

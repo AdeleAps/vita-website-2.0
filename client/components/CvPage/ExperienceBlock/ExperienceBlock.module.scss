@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   font-size: 1.05rem;
-  border: 2px solid $clr-pink-background-light;
-  border-radius: 50px;
   margin: 2rem 0.5rem;
 
   div {
@@ -12,15 +10,6 @@
     &.timeLine {
       display: flex;
       align-items: center;
-      &::before {
-        content: "";
-        display: inline-block;
-        border: 2px solid $clr-pink-background-light;
-        height: 100%;
-        position: relative;
-        left: 62px;
-        z-index: 1;
-      }
     }
     ul {
       display: flex;

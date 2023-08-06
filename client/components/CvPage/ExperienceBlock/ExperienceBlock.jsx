@@ -57,7 +57,6 @@ const ExperienceBlock = (props) => {
           className={styles.polaroid}
         >
           <img src={props.props.photo} alt={props.props.photoAltText} />
-          <figcaption>{props.props.photoAltText}</figcaption>
         </div>
       </div>
     </motion.section>

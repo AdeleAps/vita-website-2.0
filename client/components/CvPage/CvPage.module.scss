@@ -3,43 +3,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $clr-pink-background;
   overflow: hidden;
+  background-color: $clr-font-white;
   .introContainer {
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     .intro {
+      background-color: $clr-pink-background;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: $clr-white;
-      box-shadow: $boxShadow;
-      width: 85%;
-      margin: 1em;
-      padding: 3em;
-      border-radius: 3px;
-      h1 {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        letter-spacing: 1px;
-        text-align: center;
-        &::after {
-          content: url("/svg/text-divider.svg");
-          display: block;
-          width: 6em;
-          margin: auto;
-          padding-top: 1em;
-          filter: invert(66%) sepia(52%) saturate(1173%) hue-rotate(348deg)
-            brightness(96%) contrast(92%);
+      flex-direction: row;
+      .leftBlock {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        div {
+          padding: 3rem;
+          h1 {
+            font-family: $font-title;
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+          }
+          p {
+            margin-top: 0;
+            font-size: 1.1rem;
+            line-height: 1.5em;
+            padding-right: 20%;
+          }
+          @media only screen and (max-width: $tablet) {
+            p {
+              padding-right: 0;
+            }
+          }
         }
       }
-      p {
-        font-size: 1.1rem;
-        line-height: 1.5em;
-        max-width: 85%;
-        text-align: center;
+      .rightBlock {
+        flex: 1;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          vertical-align: top;
+        }
+        @media only screen and (max-width: $tablet) {
+          display: none;
+        }
       }
     }
   }
@@ -47,12 +53,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  @media only screen and (min-width: $mobile) {
-    .introContainer .intro {
-      width: 75%;
-      padding: 4em;
-      margin: 4em;
-    }
   }
 }
