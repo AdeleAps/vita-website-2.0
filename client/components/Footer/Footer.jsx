@@ -43,13 +43,18 @@ const Footer = (props) => {
           <span>
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/adele-aps%C4%ABte-81693b272/"
             >
               Web izstrāde
             </a>
           </span>
           <span>
-            <a target="_blank" href="https://www.linkedin.com/in/montakate">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/montakate"
+            >
               Dizains
             </a>
           </span>
