@@ -29,7 +29,7 @@ const CvPage = (props) => {
           <div className={styles.rightBlock}>
             <LazyLoadImage
               effect="blur"
-              src="/images/cv-page/cv-hero.png"
+              src={props.backgroundImage}
               alt="CV page hero image"
               height="100%"
             />

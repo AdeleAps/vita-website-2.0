@@ -14,23 +14,31 @@ const ExperienceBlock = (props) => {
     },
   };
   const listItemVariant = {
-    hidden: { opacity: 0, x: 100},
+    hidden: { opacity: 0, x: 100 },
     show: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.6,
-        type: "spring"
+        type: "spring",
       },
     },
+  };
+
+  const listItemIconVariant = (variant) => {
+    if (variant % 2 === 0) {
+      return "/images/services-icons/services-icon-1.png";
+    } else {
+      return "/images/services-icons/services-icon-2.png";
+    }
   };
 
   const listItems = props.props.listItems.map((item, index) => (
     <motion.li variants={listItemVariant} key={index}>
       <span>
-        <img src="/icons/checkmark.png" alt="" />
+        <img src={listItemIconVariant(index)} alt="List icon" />
       </span>
-      <span>{item}</span>
+      <span className={styles.listItemText}>{item}</span>
     </motion.li>
   ));
 
