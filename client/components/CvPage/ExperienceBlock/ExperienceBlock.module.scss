@@ -59,8 +59,9 @@
       flex-direction: row-reverse;
     }
   }
-  @media only screen and (min-width: $tablet) {
+  @media only screen and (min-width: $navTablet) {
     flex-direction: row;
+    align-items: center;
     width: 90%;
     div {
       ul {

@@ -6,10 +6,16 @@
   overflow: hidden;
   background-color: $clr-font-white;
   .introContainer {
+    width: 100%;
+    height: 100%;
+    @media only screen and (min-width: $desktop) {
+      height: 25em;
+    }
     .intro {
       background-color: $clr-pink-background;
       display: flex;
       flex-direction: row;
+      height: 100%;
       .leftBlock {
         flex: 1;
         display: flex;
@@ -37,6 +43,8 @@
       }
       .rightBlock {
         flex: 1;
+        position: relative;
+        width: 100%;
         img {
           height: 100%;
           width: 100%;
@@ -53,7 +61,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8rem;
     gap: 6rem;
+    margin: 2rem;
+    @media only screen and (min-width: $tablet) {
+      margin: 8rem;
+    }
   }
 }

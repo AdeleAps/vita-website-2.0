@@ -2,19 +2,21 @@ import React from "react";
 import styles from "./CvPage.module.scss";
 import ExperienceBlock from "./ExperienceBlock/ExperienceBlock";
 import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import Image from 'next/image'
 
 const CvPage = (props) => {
-  const experienceBlockVariant = {
+  const experienceBlockVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: {
+    visible: (index) => ({
+      opacity: 1,
+      y: 0,
       transition: {
+        delay: index * 0.2,
         duration: 0.5,
-        staggerChildren: 1,
       },
-    },
-    inview: { opacity: 1, y: 0 },
+    }),
   };
+
 
   return (
     <div className={styles.cvPage}>
@@ -27,31 +29,31 @@ const CvPage = (props) => {
             </div>
           </div>
           <div className={styles.rightBlock}>
-            <LazyLoadImage
-              effect="blur"
+            <Image
               src={props.backgroundImage}
               alt="CV page hero image"
-              height="100%"
+              priority={true}
+              quality={50}
+              loading="eager"
+              fill={true}
             />
           </div>
         </div>
       </div>
-      <motion.div
-        variants={experienceBlockVariant}
-        initial="hidden"
-        animate="visible"
-        whileInView="inview"
-        className={styles.experienceBlockContainer}
-      >
+      <div className={styles.experienceBlockContainer}>
         {props.experience.map((block, index) => (
-          <ExperienceBlock
-            experienceBlockVariant={experienceBlockVariant}
-            className={index % 2 === 1 && "reverse"}
+          <motion.div
             key={index}
-            props={props.experience[index]}
-          />
+            initial="hidden"
+            animate="visible"
+            custom={index}
+            variants={experienceBlockVariants}
+            className={index % 2 === 1 ? styles.reverse : ""}
+          >
+            <ExperienceBlock props={props.experience[index]} />
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

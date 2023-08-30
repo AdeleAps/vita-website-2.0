@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ExperienceBlock.module.scss";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ExperienceBlock = (props) => {
   const listItemContainerVariant = {
@@ -36,7 +37,11 @@ const ExperienceBlock = (props) => {
   const listItems = props.props.listItems.map((item, index) => (
     <motion.li variants={listItemVariant} key={index}>
       <span>
-        <img src={listItemIconVariant(index)} alt="List icon" />
+        <LazyLoadImage
+          effect="blur"
+          src={listItemIconVariant(index)}
+          alt="List icon"
+        />
       </span>
       <span className={styles.listItemText}>{item}</span>
     </motion.li>
