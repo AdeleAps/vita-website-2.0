@@ -61,10 +61,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6rem;
     margin: 2rem;
     @media only screen and (min-width: $tablet) {
-      margin: 8rem;
+      margin: 10rem;
+      gap: 5em;
     }
   }
 }

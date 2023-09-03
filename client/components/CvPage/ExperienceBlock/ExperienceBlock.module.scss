@@ -55,7 +55,7 @@
   }
   &.reverse {
     flex-direction: column;
-    @media only screen and (min-width: $tablet) {
+    @media only screen and (min-width: $navTablet) {
       flex-direction: row-reverse;
     }
   }

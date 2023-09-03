@@ -3,7 +3,7 @@ export const getEducationData = () => {
     title: "Izglītība un sertifikācija",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    backgroundImage: "/images/cv-page/cv-hero.png",
+    backgroundImage: "/images/cv-page/cv-hero-2.jpg",
     experience: [
       {
         listItems: [

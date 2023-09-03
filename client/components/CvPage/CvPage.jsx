@@ -2,21 +2,19 @@ import React from "react";
 import styles from "./CvPage.module.scss";
 import ExperienceBlock from "./ExperienceBlock/ExperienceBlock";
 import { motion } from "framer-motion";
-import Image from 'next/image'
+import Image from "next/image";
 
 const CvPage = (props) => {
-  const experienceBlockVariants = {
+  const experienceBlockVariant = {
     hidden: { opacity: 0, y: 50 },
-    visible: (index) => ({
-      opacity: 1,
-      y: 0,
+    visible: {
       transition: {
-        delay: index * 0.2,
         duration: 0.5,
+        staggerChildren: 1,
       },
-    }),
+    },
+    inview: { opacity: 1, y: 0 },
   };
-
 
   return (
     <div className={styles.cvPage}>
@@ -33,7 +31,6 @@ const CvPage = (props) => {
               src={props.backgroundImage}
               alt="CV page hero image"
               priority={true}
-              quality={50}
               loading="eager"
               fill={true}
             />
@@ -43,14 +40,18 @@ const CvPage = (props) => {
       <div className={styles.experienceBlockContainer}>
         {props.experience.map((block, index) => (
           <motion.div
-            key={index}
+            variants={experienceBlockVariant}
             initial="hidden"
             animate="visible"
-            custom={index}
-            variants={experienceBlockVariants}
-            className={index % 2 === 1 ? styles.reverse : ""}
+            whileInView="inview"
+            viewport={{ once: true }}
+
           >
-            <ExperienceBlock props={props.experience[index]} />
+            <ExperienceBlock
+              className={index % 2 === 1 && "reverse"}
+              key={index}
+              props={props.experience[index]}
+            />
           </motion.div>
         ))}
       </div>

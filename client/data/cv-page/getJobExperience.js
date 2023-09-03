@@ -1,6 +1,6 @@
 export const getJobExperienceData = () => {
   return {
-    title: "DARBA PIEREDZE",
+    title: "Darba pieredze",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     backgroundImage: "/images/cv-page/cv-hero.png",

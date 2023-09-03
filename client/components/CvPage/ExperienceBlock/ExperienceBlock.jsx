@@ -37,8 +37,7 @@ const ExperienceBlock = (props) => {
   const listItems = props.props.listItems.map((item, index) => (
     <motion.li variants={listItemVariant} key={index}>
       <span>
-        <LazyLoadImage
-          effect="blur"
+        <img
           src={listItemIconVariant(index)}
           alt="List icon"
         />
@@ -69,7 +68,11 @@ const ExperienceBlock = (props) => {
           style={{ transform: props.props.photoRotation }}
           className={styles.polaroid}
         >
-          <img src={props.props.photo} alt={props.props.photoAltText} />
+          <LazyLoadImage
+            effect="blur"
+            src={props.props.photo}
+            alt={props.props.photoAltText}
+          />
         </div>
       </div>
     </motion.section>
