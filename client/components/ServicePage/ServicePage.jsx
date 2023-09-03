@@ -11,7 +11,7 @@ const ServicePage = (props) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.4,
-        delay: 0.5
+        delay: 0.5,
       },
     },
   };
@@ -28,22 +28,17 @@ const ServicePage = (props) => {
 
   return (
     <div className={styles.servicePage}>
-      <section className={styles.description}>
-        <div className={styles.descriptionContainer}>
-          <h2>{props.title}</h2>
-
-          {props.description.map((para, index) => (
-            <p key={index}>
-              {para}
-            </p>
-          ))}
-        </div>
-        <div className={styles.imageContainer}>
-          <img src={props.imageUrl} alt={props.title} />
-        </div>
-      </section>
       <section className={styles.otherServices}>
-        <h4>Citi pakalpojumi</h4>
+        <div className={styles.titleContainer}>
+          <h4>Pakalpojumi</h4>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
+            sunt repudiandae quia dolorum at ratione sed dolore repellat nam
+            aspernatur obcaecati magni officia, quam accusantium molestiae porro
+            quis nobis? Magni tempore eum et temporibus cupiditate numquam
+            veniam mollitia accusamus.
+          </div>
+        </div>
         <motion.div
           variants={listVariant}
           initial="hidden"
@@ -53,6 +48,18 @@ const ServicePage = (props) => {
         >
           {servicesCards}
         </motion.div>
+      </section>
+      <section className={styles.description}>
+        <div className={styles.descriptionContainer}>
+          <h2>{props.title}</h2>
+
+          {props.description.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
+        </div>
+        <div className={styles.imageContainer}>
+          <img src={props.imageUrl} alt={props.title} />
+        </div>
       </section>
     </div>
   );

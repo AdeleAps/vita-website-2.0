@@ -136,7 +136,7 @@ const Nav = (props) => {
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/diagnostika")}
-                  href="/pakalpojumi/diagnostika"
+                  href="/pakalpojumi#diagnostika"
                 >
                   Psiholoģiskā diagnostika
                 </Link>
@@ -145,7 +145,7 @@ const Nav = (props) => {
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/smilsu-speles")}
-                  href="/pakalpojumi/smilsu-speles"
+                  href="/pakalpojumi#smilsu-speles"
                 >
                   Smilšu spēles terapijas
                 </Link>
@@ -154,7 +154,7 @@ const Nav = (props) => {
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/psihoterapija")}
-                  href="/pakalpojumi/psihoterapija"
+                  href="/pakalpojumi#psihoterapija"
                 >
                   Sistēmiskā ģimenes psihoterapija
                 </Link>
@@ -163,7 +163,7 @@ const Nav = (props) => {
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/traumu-terapija")}
-                  href="/pakalpojumi/traumu-terapija"
+                  href="/pakalpojumi#traumu-terapija"
                 >
                   Traumu terapija - EMDR metode
                 </Link>
@@ -172,7 +172,7 @@ const Nav = (props) => {
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/theraplay")}
-                  href="/pakalpojumi/theraplay"
+                  href="/pakalpojumi#theraplay"
                 >
                   Theraplay®
                 </Link>
@@ -181,7 +181,7 @@ const Nav = (props) => {
                 <Link
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/baha-ziedi")}
-                  href="/pakalpojumi/baha-ziedi"
+                  href="/pakalpojumi#baha-ziedi"
                 >
                   Baha ziedu terapija
                 </Link>

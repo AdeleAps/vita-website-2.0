@@ -49,18 +49,25 @@
   }
 
   .otherServices {
-    background-color: $clr-cream-background;
-    padding: 4%;
-    padding-bottom: 7%;
+    background-color: $clr-font-header;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+    align-items: flex-end;
+    gap: 6em;
+    font-family: $font-title;
+    font-weight: 300;
+    padding: 4em;
+    .titleContainer {
+      flex: 35%;
     h4 {
       margin-top: 0;
-      margin-bottom: 1.5rem;
-      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      font-size: 3.2rem;
+      font-weight: 300;
     }
+    div {
+      font-size: 0.9rem;
+    }
+  }
     .servicesWrapper {
       display: flex;
       flex-direction: row;
