@@ -28,7 +28,7 @@ export const getServiceData = () => {
       "Šajā laikā garīgā pasaule pietuvojas materiālajai - arī caur dabu. Ziedu terapija palīdz dievišķajam spēkam nonākt mūsos un palīdzēt vismaigākajā veidā. Tad - kādēļ gan to neizmantot?",
       "Baha ziedu individuālo maisījumu pagatavo no ziedu esenču koncentrātiem. Individuālo maisījumu var pasūtīt e-veikalā www.ziedu-energija.lv vai atnākot uz individuālu konsultāciju.",
     ], "baha-ziedi"),
-    traumuTerapija: new Service("Traumu terapija - EMDR metode", [
+    traumuTerapija: new Service("Traumu terapija: EMDR metode", [
       'EMDR nozīmē "Eye-Movement Desensitization and Reprocessing" - desensibilizācija un traumu pārstrāde, izmantojot acu kustības.',
       "Tā ir  efektīva psihoterapijas metode, ko lieto sadarbībā ar klientiem traumatiskas pieredzes kontrolētai pārvarēšanai. 1987. gadā EMDR atklāja  Fransīne Šapiro, un tagad to sauc arī par priekšējās daļas/pieres rievas (frontal line) ārstēšanu.",
       "EMDR metode aktivizē dabisko atveseļošanās procesu, izmantojot paša organisma resursus, tiek  aktivizēti procesi, kas atbloķē smadzeņu neironu tīklus, kuros „glabājas” traumatiskā pieredze, un tā sāk pārstrādāties.",

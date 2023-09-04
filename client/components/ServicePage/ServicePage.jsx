@@ -16,15 +16,11 @@ const ServicePage = (props) => {
     },
   };
 
-  const filteredServicesList = Object.entries({ ...getServiceData() }).filter(
-    (item) => item[1].slug !== props.slug
-  );
+  const filteredServicesList = Object.entries({ ...getServiceData() });
 
   const servicesCards = filteredServicesList.map((item, index) => (
-    <ServiceCard key={index} {...item[1]} />
+    <ServiceCard key={index} index={index} {...item[1]} />
   ));
-
-  // TODO: Make the image adjust to the size of the description.
 
   return (
     <div className={styles.servicePage}>
