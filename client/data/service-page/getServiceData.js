@@ -16,7 +16,6 @@ export const getServiceData = () => {
       'Smilšu spēles terapijas laikā ir iespēja izveidot "savu smilšu bildi" un caur simboliem izteikt to, ko grūti pastāstīt ar vārdiem, izspēlēt negatīvo pieredzi un notikumus, atbrīvoties no spriedzes, dusmām, bailēm...',
       "Šo terapiju var pielietot bērniem sākot no 4 gadu vecuma. Taču maldīgi uzskatīt, ka smilšu bilžu likšana ir tikai bērniem. Interesants un emociju pilns darbs izveidojas arī ar pusaudžiem un īpaši - pieaugušajiem.",
       "Smilšu spēļu terapija palīdzēs gadījumos, ja ir traumatiski pārdzīvojumi (šķiršanās, nāve, ilga slimība, avārija, dzīvesvietas maiņa), neirozes, attīstības aizture, mācīšanās grūtības, autisms, mutisms, enurēze, enkoporēze, stostīšanās, tiki, nakts bailes, murgi, hiperaktivitāte, depresivitāte.",
-      "Vēlos iedrošināt atnākt uz smilšu terapiju pārus. Caur izliktajām smilšu bildēm var izdoties ieraudzīt vienam otru jaunā skatījumā, mēģināt labāk saprast vienam otru un, kas zina, varbūt atrast ikdienas pienākumos un rutīnā pazudušās agrākās jūtas. Jauniem pāriem tā ir lieliska iespēja iepazīt vienam otru.",
       "Nāciet un pamēģiniet arī Jūs!",
     ], "smilsu-speles"),
     theraplay: new Service("Teraspēle", [

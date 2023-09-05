@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
   transition: 0.5s;
   display: flex;
   flex-direction: column;
@@ -12,9 +11,11 @@
   height: 150px;
   transition: background-size 0.2s ease-in-out;
   background-size: 100%;
-  @media only screen and (max-width: $desktop) {
-    width: 130px;
-    height: 130px;
+  flex-grow: 0;
+  flex-shrink: 75%;
+  flex-basis: 14%;
+  @media only screen and (max-width: $desktop-wide) {
+    flex-basis: auto;
   }
 
   &:hover {

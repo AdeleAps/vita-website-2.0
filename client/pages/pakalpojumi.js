@@ -15,7 +15,7 @@ const BahaZiedi = (props) => {
         setMobileNav={props.setMobileNav}
         setOpenFormModal={props.setOpenFormModal}
       >
-        <ServicePage {...getServiceData().bahaZieduTerapija} />
+        <ServicePage {...getServiceData()} />
       </WebpageLayout>
     </>
   );

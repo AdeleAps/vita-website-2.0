@@ -45,18 +45,20 @@ const ServicePage = (props) => {
           {servicesCards}
         </motion.div>
       </section>
-      <section className={styles.description}>
-        <div className={styles.descriptionContainer}>
-          <h2>{props.title}</h2>
 
-          {props.description.map((para, index) => (
+    {filteredServicesList.map((service, index) =>      <section className={`${styles.description} ${index % 2 === 1 ? styles.reverse : ''}`} key={index}>
+        <div className={styles.descriptionContainer}>
+          <h2>{service[1].title}</h2>
+
+          { service[1].description.map((para, index) => (
             <p key={index}>{para}</p>
-          ))}
-        </div>
+          ))} 
+        </div> 
         <div className={styles.imageContainer}>
-          <img src={props.imageUrl} alt={props.title} />
+          <img src={service[1].imageUrl} alt={service.title} />
         </div>
-      </section>
+      </section>)}
+
     </div>
   );
 };

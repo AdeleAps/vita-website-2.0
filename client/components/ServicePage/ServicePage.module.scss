@@ -3,47 +3,45 @@
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
+  font-family: $font-title;
   .description {
     background-color: $clr-pink-background-light;
     display: flex;
     flex-direction: column;
     .descriptionContainer {
-      padding: 5%;
+      padding: 3.5rem;
       flex: 50%;
       p {
-        line-height: 1.7em;
-        color: $clr-dusty-gray;
-        padding-bottom: 0;
+        font-size: 0.9rem;
+        @media only screen and (max-width: $desktop-wide) {
+          font-size: 0.8rem;
+        }
       }
       h2 {
-        margin-top: 0;
-        text-transform: uppercase;
+        margin: 0;
+        margin-top: 1rem;
         font-size: 2.3em;
         line-height: 1.5em;
-        letter-spacing: 4px;
-        &:after {
-          content: url("/svg/text-divider-service.svg");
-          display: block;
-          width: 4em;
-          opacity: 75%;
-          margin-top: -20px;
-        }
+        font-weight: 500;
       }
     }
     .imageContainer {
       flex: auto;
-      padding: 7%;
       padding-top: 0;
       height: auto;
       max-height: 100%;
       overflow: hidden;
+      padding: 20%;
+      padding-block: 0;
+
+      @media only screen and (max-width: $mobile) {
+        padding: 3%;
+      }
 
       img {
         object-fit: cover;
         height: 100%;
         width: 100%;
-        border: 10px solid $clr-white;
-        border-radius: 6px;
       }
     }
   }
@@ -87,15 +85,16 @@
 
   @media only screen and (min-width: $navTablet) {
     .description {
-      flex-direction: row;
-      min-height: 80vh;
+      flex-direction: row-reverse;
+      height: 65vh;
+      
+      &.reverse {
+        flex-direction: row;
+      }
       .descriptionContainer {
         flex: 50%;
         h2 {
           font-size: 3em;
-        }
-        p {
-          padding-right: 20%;
         }
       }
       .imageContainer {
@@ -119,7 +118,7 @@
   }
   @media only screen and (min-width: $desktop-wide) {
     .description .descriptionContainer p {
-      width: 70%;
+      width: 90%;
     }
   }
 }
