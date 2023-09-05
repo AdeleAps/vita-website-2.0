@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect}from "react";
 import styles from "./ServicePage.module.scss";
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard/ServiceCard";
 import { getServiceData } from "../../data/service-page/getServiceData";
+import { useRouter } from "next/router"; 
 
 const ServicePage = (props) => {
   const listVariant = {
@@ -15,6 +16,21 @@ const ServicePage = (props) => {
       },
     },
   };
+
+  const router = useRouter(); // Initialize the router
+
+  useEffect(() => {
+    const hash = router.asPath.split("#")[1];
+    const section = document.getElementById(hash);
+
+    if (section) {
+      const offset = 250;
+      window.scrollTo({
+        top: section.offsetTop - offset,
+        behavior: "smooth",
+      });
+    }
+  }, [router.asPath]);
 
   const filteredServicesList = Object.entries({ ...getServiceData() });
 
@@ -46,7 +62,7 @@ const ServicePage = (props) => {
         </motion.div>
       </section>
 
-    {filteredServicesList.map((service, index) =>      <section className={`${styles.description} ${index % 2 === 1 ? styles.reverse : ''}`} key={index}>
+    {filteredServicesList.map((service, index) =>      <section id={service[1].slug} className={`${styles.description} ${index % 2 === 1 ? styles.reverse : ''}`} key={index}>
         <div className={styles.descriptionContainer}>
           <h2>{service[1].title}</h2>
 
