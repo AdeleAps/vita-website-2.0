@@ -1,4 +1,4 @@
-import React, {useEffect}from "react";
+import React, {useEffect, useRef}from "react";
 import styles from "./ServicePage.module.scss";
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard/ServiceCard";
@@ -17,18 +17,21 @@ const ServicePage = (props) => {
     },
   };
 
-  const router = useRouter(); // Initialize the router
+  const router = useRouter(); 
+  const sectionRefs = {}
 
   useEffect(() => {
     const hash = router.asPath.split("#")[1];
     const section = document.getElementById(hash);
 
-    if (section) {
+    if (section && sectionRefs[hash]) {
       const offset = 250;
-      window.scrollTo({
-        top: section.offsetTop - offset,
-        behavior: "smooth",
-      });
+      setTimeout(() => {
+        window.scrollTo({
+          top: sectionRefs[hash].offsetTop - offset,
+          behavior: "instant",
+        });
+      }, 0);
     }
   }, [router.asPath]);
 
@@ -62,7 +65,9 @@ const ServicePage = (props) => {
         </motion.div>
       </section>
 
-    {filteredServicesList.map((service, index) =>      <section id={service[1].slug} className={`${styles.description} ${index % 2 === 1 ? styles.reverse : ''}`} key={index}>
+    {filteredServicesList.map((service, index) =>      <section  ref={(ref) => {
+            sectionRefs[service[1].slug] = ref; // Assign a ref for each section
+          }} id={service[1].slug} className={`${styles.description} ${index % 2 === 1 ? styles.reverse : ''}`} key={index}>
         <div className={styles.descriptionContainer}>
           <h2>{service[1].title}</h2>
 

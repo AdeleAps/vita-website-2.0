@@ -45,6 +45,7 @@ const CvPage = (props) => {
             animate="visible"
             whileInView="inview"
             viewport={{ once: true }}
+            key={index}
 
           >
             <ExperienceBlock
