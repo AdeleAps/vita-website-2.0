@@ -1,7 +1,8 @@
 .pricingPage {
   padding-top: 80px;
-  background-color: $clr-cream-background;
+  background-color: $clr-pink-background;
   padding-bottom: 0.5em;
+  font-family: $font-title;
   .container {
     max-width: 1000px;
     margin-left: auto;
@@ -19,30 +20,46 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
+      position: relative;
+      &:after {
+        content: "";
+        background: linear-gradient(to right, transparent 10%, rgb(227, 165, 65) 50%, transparent 90%);
+        position: absolute;
+        width: 200%; 
+        height: 1.8px;
+        bottom: -10px;
+        left: -50%; 
+      }
     }
     .table-header {
-      background-color: $clr-pink-background;
-      font-size: 1em;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      font-size: 1.8em;
+      font-weight: 500;
       .col-2 {
         position: relative;
       }
     }
     .table-row {
-      background-color: #ffffff;
       display: flex;
       align-items: center;
-      height: 3.4em;
-      font-size: 0.8em;
+      font-size: 1em;
+      .priceWrapper {
+        strong {
+          display: inline-block;
+          background-image: url(../../public/images//services-icons/services-icon-1.png);
+          background-repeat: no-repeat;
+          background-size: 3em;
+          padding: 15px;
+          background-position: center;
+        }
+      }
     }
     .col-1 {
       flex-basis: 33%;
     }
 
     .col-3 {
-      flex-basis: 33%;
-      text-align: right;
+      flex-basis: 40%;
+      text-align: left;
       div {
         display: flex;
         flex-direction: column;

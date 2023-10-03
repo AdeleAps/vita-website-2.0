@@ -31,19 +31,17 @@ const PricingPage = () => {
               data-label="CENA"
             >
               <div>
-                <span>
-                  50 EUR (
-                  <span>
-                    <em> ievadkonsultācija </em>
-                  </span>
-                  )
-                </span>{" "}
-                <span>
-                  35 EUR (
-                  <span>
-                    <em> sesija </em>
-                  </span>
-                )
+                <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
+                <span className={styles.priceWrapper}>
+                <strong>
+                  35 € </strong>
+                  <span> sesija</span>
+                
                 </span>
               </div>
             </div>
@@ -65,7 +63,13 @@ const PricingPage = () => {
               className={`${styles.col} ${styles["col-3"]}`}
               data-label="CENA"
             >
-              60 EUR
+                 <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € 
+                  </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
             </div>
           </li>
           <li className={styles["table-row"]}>
@@ -85,7 +89,13 @@ const PricingPage = () => {
               className={`${styles.col} ${styles["col-3"]}`}
               data-label="CENA"
             >
-              60 EUR
+                <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € 
+                  </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
             </div>
           </li>
           <li className={styles["table-row"]}>
@@ -105,7 +115,13 @@ const PricingPage = () => {
               className={`${styles.col} ${styles["col-3"]}`}
               data-label="CENA"
             >
-              60 EUR
+                 <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € 
+                  </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
             </div>
           </li>
           <li className={styles["table-row"]}>
@@ -125,7 +141,13 @@ const PricingPage = () => {
               className={`${styles.col} ${styles["col-3"]}`}
               data-label="CENA"
             >
-              60 EUR
+                 <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € 
+                  </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
             </div>
           </li>
           <li className={styles["table-row"]}>
@@ -145,7 +167,13 @@ const PricingPage = () => {
               className={`${styles.col} ${styles["col-3"]}`}
               data-label="CENA"
             >
-              60 EUR
+                <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € 
+                  </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
             </div>
           </li>
           <li className={styles["table-row"]}>
@@ -165,7 +193,13 @@ const PricingPage = () => {
               className={`${styles.col} ${styles["col-3"]}`}
               data-label="CENA"
             >
-              60 EUR
+                <span className={styles.priceWrapper}>
+                  <strong>
+                  50 € 
+                  </strong>
+                  <span> ievadkonsultācija </span>
+                  
+                </span>
             </div>
           </li>
         </ul>
