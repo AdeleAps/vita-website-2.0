@@ -1,46 +1,71 @@
-.contactsPage {
-  padding-top: 80px;
+.contactsPageContainer {
   display: flex;
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: $clr-cream-background;
   flex-direction: column;
-  & > * {
-    flex: 50%;
-  }
-  .info {
-    padding: 5%;
+  padding-top: 80px;
+  background-color: $clr-pink-background;
+  font-family: $font-title;
+  .contactsPage {
     display: flex;
+    overflow: hidden;
     flex-direction: column;
-    justify-content: center;
-    h4 {
-      font-size: 2em;
-      margin-top: 0.5em;
-      &:before {
-        content: url("/svg/text-divider-service.svg");
-        margin-bottom: 0.5em;
-        display: block;
-        width: 30%;
-        opacity: 75%;
+    height: 70vh;
+    .info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2.6em;
+      h2 {
+        font-size: 3.6em;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0.4em;
+      }
+      .gridContainer {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        gap: 10px;
+        @media only screen and (max-width: $tablet) {
+          grid-template-columns: 25% 75%;
+        }
+        .gridItem {
+          display: flex;
+          flex-direction: column;
+          p {
+            margin: 0;
+          }
+          a {
+            text-decoration: underline;
+          }
+        }
+        .gridItem:nth-child(odd) {
+          font-weight: bold;
+          padding-left: 3px;
+        }
       }
     }
-    span,
-    button,
-    a,
-    textarea {
-      color: $clr-orange-btn-hover;
-      font-size: inherit;
+    .imageContainer {
+      @media only screen and (max-width: $navTablet) {
+        display: none;
+      }
+      span {
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          vertical-align: top;
+        }
+      }
     }
-    p {
-      font-size: 1rem;
-      margin-bottom: 0;
+    & > * {
+      flex: 50%;
     }
-    .number {
-      cursor: pointer;
-      position: relative;
+    @media only screen and (min-width: $navTablet) {
+      flex-direction: row;
     }
   }
-  @media only screen and (min-width: $navTablet) {
-    flex-direction: row;
+  .map {
+    height: 30em;
   }
 }
