@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
@@ -58,7 +58,7 @@ const EmailForm = (props) => {
             accept: "*/*",
             "Content-Type": "application/json",
           },
-          data: values.description,
+          data: values,
         }).then(() => {
           setSubmitting(false);
           props.setName(values.firstName);
