@@ -7,6 +7,7 @@
 
   @media only screen and (max-width: $navTablet) {
     flex-direction: column-reverse;
+    padding: 1rem;
   }
 
   a {
@@ -26,6 +27,9 @@
       line-height: 1.1em;
       margin: 0;
       margin-bottom: 2rem;
+      @media only screen and (max-width: $tablet) {
+        font-size: 3rem;
+      }
     }
   }
   .middleSection {
