@@ -16,6 +16,7 @@ const Footer = (props) => {
             className="footer"
           >
             Pieteikt vizīti
+            
           </Button>
         </div>
         <div className={styles.bottomText}>© Vita Apsīte 2023</div>
