@@ -53,12 +53,12 @@ const EmailForm = (props) => {
       onSubmit={(values, { setSubmitting }) => {
         fetchData({
           method: "POST",
-          url: "/send",
+          url: "/api/send-mail",
           headers: {
             accept: "*/*",
             "Content-Type": "application/json",
           },
-          data: values,
+          data: values.description,
         }).then(() => {
           setSubmitting(false);
           props.setName(values.firstName);
