@@ -25,7 +25,7 @@ export default function handler(req, res) {
 
   const message = {
     from: process.env.NODEMAILER_SENDER_EMAIL,
-    to: process.env.NODEMAILER_EMAIL,
+    to: process.env.NODEMAILER_RECEIVER_EMAIL,
     subject: `Jauns pieteikums konsultācijai`,
     text: formattedEmailBody,
     html: formattedEmailBodyHTML,
