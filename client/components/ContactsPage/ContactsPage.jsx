@@ -1,17 +1,8 @@
-import React, { useState } from "react";
 import styles from "./ContactsPage.module.scss";
 import Map from "./Map/Map";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ContactsPage = (props) => {
-  const copyNumber = () => {
-    navigator.clipboard.writeText("29549969");
-    setMiniPopupOpen(true);
-  };
-
-  const closeMiniPopup = () => {
-    setMiniPopupOpen(false);
-  };
 
   return (
     <div className={styles.contactsPageContainer}>

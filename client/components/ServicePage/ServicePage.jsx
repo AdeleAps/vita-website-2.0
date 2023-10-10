@@ -1,9 +1,9 @@
-import React, {useEffect, useRef}from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./ServicePage.module.scss";
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard/ServiceCard";
 import { getServiceData } from "../../data/service-page/getServiceData";
-import { useRouter } from "next/router"; 
+import { useRouter } from "next/router";
 
 const ServicePage = (props) => {
   const listVariant = {
@@ -17,8 +17,8 @@ const ServicePage = (props) => {
     },
   };
 
-  const router = useRouter(); 
-  const sectionRefs = {}
+  const router = useRouter();
+  const sectionRefs = {};
 
   useEffect(() => {
     const hash = router.asPath.split("#")[1];
@@ -28,7 +28,7 @@ const ServicePage = (props) => {
       const offset = 250;
       setTimeout(() => {
         window.scrollTo({
-          top: sectionRefs[hash].offsetTop - offset,
+          top: sectionRefs[hash] ? sectionRefs[hash].offsetTop - offset : null,
           behavior: "instant",
         });
       }, 0);
@@ -65,21 +65,29 @@ const ServicePage = (props) => {
         </motion.div>
       </section>
 
-    {filteredServicesList.map((service, index) =>      <section  ref={(ref) => {
+      {filteredServicesList.map((service, index) => (
+        <section
+          ref={(ref) => {
             sectionRefs[service[1].slug] = ref; // Assign a ref for each section
-          }} id={service[1].slug} className={`${styles.description} ${index % 2 === 1 ? styles.reverse : ''}`} key={index}>
-        <div className={styles.descriptionContainer}>
-          <h2>{service[1].title}</h2>
+          }}
+          id={service[1].slug}
+          className={`${styles.description} ${
+            index % 2 === 1 ? styles.reverse : ""
+          }`}
+          key={index}
+        >
+          <div className={styles.descriptionContainer}>
+            <h2>{service[1].title}</h2>
 
-          { service[1].description.map((para, index) => (
-            <p key={index}>{para}</p>
-          ))} 
-        </div> 
-        <div className={styles.imageContainer}>
-          <img src={service[1].imageUrl} alt={service.title} />
-        </div>
-      </section>)}
-
+            {service[1].description.map((para, index) => (
+              <p key={index}>{para}</p>
+            ))}
+          </div>
+          <div className={styles.imageContainer}>
+            <img src={service[1].imageUrl} alt={service.title} />
+          </div>
+        </section>
+      ))}
     </div>
   );
 };

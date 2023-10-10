@@ -8,7 +8,7 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    height: 70vh;
+    min-height: 70vh;
     .info {
       display: flex;
       justify-content: center;

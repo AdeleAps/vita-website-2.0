@@ -37,10 +37,7 @@ const ExperienceBlock = (props) => {
   const listItems = props.props.listItems.map((item, index) => (
     <motion.li variants={listItemVariant} key={index}>
       <span>
-        <img
-          src={listItemIconVariant(index)}
-          alt="List icon"
-        />
+        <img src={listItemIconVariant(index)} alt="List icon" />
       </span>
       <span className={styles.listItemText}>{item}</span>
     </motion.li>

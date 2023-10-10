@@ -97,13 +97,17 @@ const Nav = (props) => {
           } ${props.openMobileNav ? `${styles.mobileDropdown}` : ""}`}
           ref={izglitibaRef}
         >
-          <button onClick={handleIzglitibaDropdown}>
+          <button
+            aria-label="navigation header"
+            onClick={handleIzglitibaDropdown}
+          >
             Izglītība un pieredze
           </button>
           <div className={styles.dropdownWrapper}>
             <ul className={styles.dropdown}>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   href="/izglitiba"
                   className={activeLink("/izglitiba")}
@@ -113,6 +117,7 @@ const Nav = (props) => {
               </li>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   href="/darba-pieredze"
                   className={activeLink("/darba-pieredze")}
@@ -129,11 +134,17 @@ const Nav = (props) => {
           } ${props.openMobileNav ? `${styles.mobileDropdown}` : ""}`}
           ref={pakalpojumiRef}
         >
-          <button onClick={handlePakalpojumiDropdown}>Pakalpojumi</button>
+          <button
+            aria-label="navigation header"
+            onClick={handlePakalpojumiDropdown}
+          >
+            Pakalpojumi
+          </button>
           <div className={styles.dropdownWrapper}>
             <ul className={styles.dropdown}>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/diagnostika")}
                   href="/pakalpojumi#diagnostika"
@@ -143,6 +154,7 @@ const Nav = (props) => {
               </li>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/smilsu-speles")}
                   href="/pakalpojumi#smilsu-speles"
@@ -152,6 +164,7 @@ const Nav = (props) => {
               </li>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/psihoterapija")}
                   href="/pakalpojumi#psihoterapija"
@@ -161,6 +174,7 @@ const Nav = (props) => {
               </li>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/traumu-terapija")}
                   href="/pakalpojumi#traumu-terapija"
@@ -170,6 +184,7 @@ const Nav = (props) => {
               </li>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/theraplay")}
                   href="/pakalpojumi#theraplay"
@@ -179,6 +194,7 @@ const Nav = (props) => {
               </li>
               <li>
                 <Link
+                  aria-label="navigation link"
                   onClick={closeNav}
                   className={activeLink("/pakalpojumi/baha-ziedi")}
                   href="/pakalpojumi#baha-ziedi"
@@ -191,6 +207,7 @@ const Nav = (props) => {
         </li>
         <li>
           <Link
+            aria-label="navigation link"
             onClick={props.openMobileNav && closeNav}
             className={activeLink("/maksa")}
             href="/maksa"
@@ -200,6 +217,7 @@ const Nav = (props) => {
         </li>
         <li>
           <Link
+            aria-label="navigation link"
             onClick={props.openMobileNav && closeNav}
             className={activeLink("/kontakti")}
             href="/kontakti"
