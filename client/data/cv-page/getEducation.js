@@ -3,7 +3,7 @@ export const getEducationData = () => {
     title: "Izglītība un sertifikācija",
     description:
       "",
-    backgroundImage: "/images/cv-page/cv-hero-2.jpg",
+    backgroundImage: "/images/cv-page/cv-hero-2.webp",
     experience: [
       {
         listItems: [

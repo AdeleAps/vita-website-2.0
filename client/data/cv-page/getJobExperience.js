@@ -2,7 +2,7 @@ export const getJobExperienceData = () => {
   return {
     title: "Darba pieredze",
     description: "",
-    backgroundImage: "/images/cv-page/cv-hero.png",
+    backgroundImage: "/images/cv-page/cv-hero.webp",
     experience: [
       {
         listItems: [

@@ -6,6 +6,7 @@ import { ErrorStateContext } from "../store/ErrorStateContext";
 import LoadingPage from "../components/LoadingPage/LoadingPage";
 import Router from "next/router";
 
+
 function MyApp({ Component, pageProps }) {
   const [openMobileNav, setMobileNav] = useState(false);
   const [openFormModal, setOpenFormModal] = useState(false);

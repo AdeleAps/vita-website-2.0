@@ -2,7 +2,7 @@ class Service {
   constructor(title, description, slug) {
     this.title = title;
     this.description = description;
-    this.imageUrl = `/images/services/${slug}.jpg`;
+    this.imageUrl = `/images/services/${slug}.webp`;
     this.slug = slug;
   }
 }

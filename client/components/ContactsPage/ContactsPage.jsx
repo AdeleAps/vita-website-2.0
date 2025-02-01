@@ -45,7 +45,7 @@ const ContactsPage = (props) => {
         <div className={styles.imageContainer}>
           <LazyLoadImage
             effect="blur"
-            src="/images/contacts-page/contacts-page-hero.png"
+            src="/images/contacts-page/contacts-page-hero.webp"
           />
         </div>
       </div>
