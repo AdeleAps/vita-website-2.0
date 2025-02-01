@@ -9,7 +9,7 @@ class Service {
 
 export const getServiceData = () => {
   return {
-    psihoterapija: new Service(`Sistēmiskā ģimenes psihoterapija`, [
+    psihoterapija: new Service(`Ģimenes terapija`, [
       "Man ļoti simpatizē ideja, ka ģimenes psihoterapeits ir nevis eksperts, kas zina, kā mainīt ģimeni, bet  ir pārmaiņu moderators - ģimenes psihoterapeits veido labvēlīgu gaisotni, apstākļus, kas mazina ģimenes aizsardzības, rosina atvērtus dialogus, palīdz ģimenei ieraudzīt savas attiecības no malas. Psihoterapeits rada impulsus, kas izjauc ierasto un mudina ģimeni meklēt jaunu līdzsvaru, jaunus risinājumus.",
     ], "psihoterapija"),
     smilsuSpele: new Service("Smilšu spēles terapija", [
@@ -18,10 +18,10 @@ export const getServiceData = () => {
       "Smilšu spēļu terapija palīdzēs gadījumos, ja ir traumatiski pārdzīvojumi (šķiršanās, nāve, ilga slimība, avārija, dzīvesvietas maiņa), neirozes, attīstības aizture, mācīšanās grūtības, autisms, mutisms, enurēze, enkoporēze, stostīšanās, tiki, nakts bailes, murgi, hiperaktivitāte, depresivitāte.",
       "Nāciet un pamēģiniet arī Jūs!",
     ], "smilsu-speles"),
-    theraplay: new Service("Teraspēle", [
-      'Theraplay® ir īpašs psihoterapijas veids, kas palīdz bērniem (visos vecumos) un vecākiem atjaunot emocionālās saites, izveidot drošu piesaisti. Tā palīdz vecākiem, kuriem ir grūtības savu bērnu disciplinēšanā, palīdz bērniem, kuri ir pārāk aktīvi un viņiem ir grūtības klausīt un "sekot" pieaugušajiem. Tā palīdz bērniem, kuri ir nedroši un kautrīgi, kuri pārcietuši traumas, kuri ir adoptēti vai aug audžuģimenēs.',
+    teraspele: new Service("Terapeitiskās spēles vecākiem ar bērniem", [
+      'Teraspēle ir īpašs psihoterapijas veids, kas palīdz bērniem (visos vecumos) un vecākiem atjaunot emocionālās saites, izveidot drošu piesaisti. Tā palīdz vecākiem, kuriem ir grūtības savu bērnu disciplinēšanā, palīdz bērniem, kuri ir pārāk aktīvi un viņiem ir grūtības klausīt un "sekot" pieaugušajiem. Tā palīdz bērniem, kuri ir nedroši un kautrīgi, kuri pārcietuši traumas, kuri ir adoptēti vai aug audžuģimenēs.',
       'Teraspēles terapijas laikā speciālists palīdz vecākiem radīt bērnā drošības izjūtu, viņu savaldīt, nomierināt, liek viņam izjust robežas,  rūpēšanos, izaicinājumu, jautrību un mīļumu. Mani visvairāk aizrauj tas, ka tik jaukā, jautrā un patīkamā veidā (it kā tikai rotaļājoties!), tiek paveikts ļoti nozīmīgs un svarīgs psihoterapijas darbs, kas nostiprina, "ieliek pamatus" psiholoģiski veselīgai visai turpmākajai bērna dzīvei.',
-    ], "theraplay"),
+    ], "teraspele"),
     bahaZieduTerapija: new Service("Baha ziedu terapija", [
       'Mani šim terapijas veidam piesaistīja skaistais un noslēpumainais nosaukums - Ziedu terapija. Vai tiešām ziedi spēj mums palīdzēt? Kaut arī dziļi iekšienē mana atbilde jau sen uz šo jautājumu bija "Jā" (jo ne velti skaistums glābs pasauli), analītiskais, racionālais, skeptiskais prāts lika šaubīties. Taču, jo vairāk esmu saistībā ar ziedu terapiju (semināri, grāmatas, pieredze ar sevi un klientiem), jo mazākas ir manas šaubas.',
       "Šajā laikā garīgā pasaule pietuvojas materiālajai - arī caur dabu. Ziedu terapija palīdz dievišķajam spēkam nonākt mūsos un palīdzēt vismaigākajā veidā. Tad - kādēļ gan to neizmantot?",
@@ -35,5 +35,11 @@ export const getServiceData = () => {
     diagnostika: new Service("Psiholoģiskā diagnostika", [
       " Рsiholoģiskā izpēte - bērnu gatavība skolai, mācīšanās traucējumu izvērtējums, kognitīvo spēju izpēte ar Latvijā adaptēto Vudkoka - Džonsona testu un Vekslera testu. Kā arī psiholoģisko atzinumu rakstīšana dažādām institūcijām – skolas atbalsta komandai, valsts un/vai pašvaldību medicīniskajai komisijai, bāriņtiesai, DEĀK.",
     ], "diagnostika"),
+    supervizija: new Service("Supervīzija", [
+      "Konsultatīvs un izglītojošs atbalsts supervizējamajiem (profesionāļiem individuāli, profesionāļu grupām, komandām vai organizācijām) par jautājumiem, kas saistīti ar profesionālo darbību.",
+    ], "supervizijas"),
+    psihologuParraudziba: new Service("Psihologu pārraudzība", [
+      "Psihologa un psihologa-pārrauga sistēmiska sadarbība (individuāli vai grupā), kuras mērķis ir pārraudzīt psihologa profesionālo darbību un pilnveidot viņa profesionālo izpratni un kompetenci, lai nodrošinātu augstvērtīgāku psiholoģoskās palīdzības sniegšanu un psihologa gatavību patstāvīgi veikt profesionālo darbību.",
+    ], "psihologu-parraudziba"),
   };
 };

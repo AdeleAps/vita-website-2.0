@@ -159,7 +159,7 @@ const Nav = (props) => {
                   className={activeLink("/pakalpojumi/smilsu-speles")}
                   href="/pakalpojumi#smilsu-speles"
                 >
-                  Smilšu spēles terapijas
+                  Smilšu spēles terapija
                 </Link>
               </li>
               <li>
@@ -169,7 +169,7 @@ const Nav = (props) => {
                   className={activeLink("/pakalpojumi/psihoterapija")}
                   href="/pakalpojumi#psihoterapija"
                 >
-                  Sistēmiskā ģimenes psihoterapija
+                 Ģimenes terapija
                 </Link>
               </li>
               <li>
@@ -186,10 +186,10 @@ const Nav = (props) => {
                 <Link
                   aria-label="navigation link"
                   onClick={closeNav}
-                  className={activeLink("/pakalpojumi/theraplay")}
-                  href="/pakalpojumi#theraplay"
+                  className={activeLink("/pakalpojumi/teraspele")}
+                  href="/pakalpojumi#teraspele"
                 >
-                  Theraplay®
+                  Teraspēle
                 </Link>
               </li>
               <li>
@@ -200,6 +200,26 @@ const Nav = (props) => {
                   href="/pakalpojumi#baha-ziedi"
                 >
                   Baha ziedu terapija
+                </Link>
+              </li>
+              <li>
+                <Link
+                  aria-label="navigation link"
+                  onClick={closeNav}
+                  className={activeLink("/pakalpojumi/supervizija")}
+                  href="/pakalpojumi#supervizija"
+                >
+                  Supervīzija
+                </Link>
+              </li>
+              <li>
+                <Link
+                  aria-label="navigation link"
+                  onClick={closeNav}
+                  className={activeLink("/pakalpojumi/supervizija")}
+                  href="/pakalpojumi#psihologu-parraudziba"
+                >
+                  Psihologu pārraudzība
                 </Link>
               </li>
             </ul>

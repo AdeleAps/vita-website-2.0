@@ -4,11 +4,11 @@ import WebsiteHead from "./../components/reusables/WebsiteHead/WebsiteHead";
 import ServicePage from "./../components/ServicePage/ServicePage";
 import { getServiceData } from "./../data/service-page/getServiceData"
 
-const BahaZiedi = (props) => {
+const Pakalpojumi = (props) => {
 
   return (
     <>
-      <WebsiteHead title="Vita Apsīte - Baha Ziedi" />
+      <WebsiteHead title="Vita Apsīte - Pakalpojumi" />
       <WebpageLayout
         openMobileNav={props.openMobileNav}
         setMobileNav={props.setMobileNav}
@@ -20,4 +20,4 @@ const BahaZiedi = (props) => {
   );
 };
 
-export default BahaZiedi;
+export default Pakalpojumi;

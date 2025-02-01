@@ -47,11 +47,7 @@ const ServicePage = (props) => {
         <div className={styles.titleContainer}>
           <h4>Pakalpojumi</h4>
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
-            sunt repudiandae quia dolorum at ratione sed dolore repellat nam
-            aspernatur obcaecati magni officia, quam accusantium molestiae porro
-            quis nobis? Magni tempore eum et temporibus cupiditate numquam
-            veniam mollitia accusamus.
+          Individuāla, pāru un ģimenes psihoterapija, psihologa konsultācijas un psiholoģisko atzinumu rakstīšana (skolai, ārstiem, pedagoģiski medicīniskajai komisijai (PMK), Veselības un darbspēju ekspertīzes ārstu valsts komisijai (VDEĀVK)), supervīzijas un psihologu pārraudzības prakse.
           </div>
         </div>
         <motion.div
