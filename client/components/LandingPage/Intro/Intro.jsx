@@ -27,21 +27,21 @@ const Intro = (props) => {
           <div>
             <LazyLoadImage
               effect="blur"
-              src="./images/intro-carousel/intro1.jpg"
+              src="./images/intro-carousel/intro1.webp"
               alt="Vitas Apsītes privātprakse."
             />
           </div>
           <div>
             <LazyLoadImage
               effect="blur"
-              src="./images/intro-carousel/intro2.jpg"
+              src="./images/intro-carousel/intro2.webp"
               alt="Vitas Apsītes privātprakse."
             />
           </div>
           <div>
             <LazyLoadImage
               effect="blur"
-              src="./images/intro-carousel/intro3.jpg"
+              src="./images/intro-carousel/intro3.webp"
               alt="Vitas Apsītes privātprakse."
             />
           </div>
