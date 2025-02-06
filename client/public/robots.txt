@@ -1,0 +1,22 @@
+User-agent: bingbot
+User-agent: msnbot
+User-agent: msnbot-media
+User-agent: YandexBot
+Crawl-delay: 120
+
+User-agent: discobot
+User-agent: dotbot
+User-agent: yacybot
+User-agent: PetalBot
+User-agent: SemrushBot
+User-agent: AhrefsBot
+User-agent: grapeshot
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: Slurp
+Crawl-delay: 120
+
+Sitemap: https://vitaapsite.lv/sitemap.xml
+
+User-agent: *
