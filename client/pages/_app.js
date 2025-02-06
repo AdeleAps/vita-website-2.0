@@ -5,7 +5,7 @@ import PopupFeedback from "../components/PopupFeedback/PopupFeedback";
 import { ErrorStateContext } from "../store/ErrorStateContext";
 import LoadingPage from "../components/LoadingPage/LoadingPage";
 import Router from "next/router";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
   const [openMobileNav, setMobileNav] = useState(false);
@@ -32,35 +32,37 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ErrorStateContext.Provider value={{ error, setError }}>
-      {loading ? (
-        <LoadingPage />
-      ) : (
-        <Component
-          openMobileNav={openMobileNav}
-          setMobileNav={setMobileNav}
+    <>
+      <ErrorStateContext.Provider value={{ error, setError }}>
+        {loading ? (
+          <LoadingPage />
+        ) : (
+          <Component
+            openMobileNav={openMobileNav}
+            setMobileNav={setMobileNav}
+            openFormModal={openFormModal}
+            setOpenFormModal={setOpenFormModal}
+            setOpenFeedbackPopup={setOpenFeedbackPopup}
+            feebackPopup={feebackPopup}
+            setName={setName}
+            {...pageProps}
+          />
+        )}
+        <PopupForm
           openFormModal={openFormModal}
           setOpenFormModal={setOpenFormModal}
-          setOpenFeedbackPopup={setOpenFeedbackPopup}
           feebackPopup={feebackPopup}
+          setOpenFeedbackPopup={setOpenFeedbackPopup}
           setName={setName}
-          {...pageProps}
         />
-      )}
-      <PopupForm
-        openFormModal={openFormModal}
-        setOpenFormModal={setOpenFormModal}
-        feebackPopup={feebackPopup}
-        setOpenFeedbackPopup={setOpenFeedbackPopup}
-        setName={setName}
-      />
-      <PopupFeedback
-        feebackPopup={feebackPopup}
-        setOpenFeedbackPopup={setOpenFeedbackPopup}
-        name={name}
-      />
+        <PopupFeedback
+          feebackPopup={feebackPopup}
+          setOpenFeedbackPopup={setOpenFeedbackPopup}
+          name={name}
+        />
+      </ErrorStateContext.Provider>
       <Analytics />
-    </ErrorStateContext.Provider>
+    </>
   );
 }
 
