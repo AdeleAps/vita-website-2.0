@@ -5,7 +5,7 @@ import PopupFeedback from "../components/PopupFeedback/PopupFeedback";
 import { ErrorStateContext } from "../store/ErrorStateContext";
 import LoadingPage from "../components/LoadingPage/LoadingPage";
 import Router from "next/router";
-
+import { Analytics } from "@vercel/analytics/next";
 
 function MyApp({ Component, pageProps }) {
   const [openMobileNav, setMobileNav] = useState(false);
@@ -59,6 +59,7 @@ function MyApp({ Component, pageProps }) {
         setOpenFeedbackPopup={setOpenFeedbackPopup}
         name={name}
       />
+      <Analytics />
     </ErrorStateContext.Provider>
   );
 }
