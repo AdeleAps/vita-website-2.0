@@ -19,20 +19,20 @@ const Footer = (props) => {
             
           </Button>
         </div>
-        <div className={styles.bottomText}>© Vita Apsīte 2023</div>
+        <div className={styles.bottomText}>© Vita Apsīte 2025</div>
       </div>
       <div className={styles.middleSection}>
         <div className={styles.infoOuterWrapper}>
           <div className={styles.infoWrapper}>
-            <span>Adrese</span>
+            <span>Adrese </span>
             <span>Rīga, Tallinas iela 95, 213. kabinets</span>
           </div>
           <div className={styles.infoWrapper}>
-            <span>Telefons</span>
+            <span>Telefons </span>
             <span>+371 29549969</span>
           </div>
           <div className={styles.infoWrapper}>
-            <span>E-pasts</span>
+            <span>E-pasts </span>
             <span>
               <a href="mailto:vita.psihologs@gmail.com">
                 vita.psihologs@gmail.com
@@ -47,7 +47,7 @@ const Footer = (props) => {
               rel="noreferrer"
               href="https://www.linkedin.com/in/adele-aps%C4%ABte-81693b272/"
             >
-              Web izstrāde
+              Web izstrāde 
             </a>
           </span>
           <span>
@@ -56,7 +56,7 @@ const Footer = (props) => {
               rel="noreferrer"
               href="https://www.linkedin.com/in/montakate"
             >
-              Dizains
+              Dizains 
             </a>
           </span>
         </div>

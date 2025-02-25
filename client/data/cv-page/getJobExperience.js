@@ -9,7 +9,7 @@ export const getJobExperienceData = () => {
           "No 2023. gada supervizors individuāliem klientiem, grupām un darba kolektīviem.",
           "No 2019. gada psihologs-pārraugs individuāli psihologiem un psihologiem grupās.",
           "No 2018. gada psihologa, psihoterapijas speciālista privātprakse.",
-          "No 2009. gadapsihologa privātprakse.",
+          "No 2009. gada psihologa privātprakse.",
         ],
         photo: "/images/cv-page/list-photos/education-5.jpg",
         photoAltText: "Apraksts",

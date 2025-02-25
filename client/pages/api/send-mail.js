@@ -20,8 +20,8 @@ export default function handler(req, res) {
   const emoji =
     emojiOptions[Math.floor(Math.random() * (emojiOptions.length - 1))];
 
-  const formattedEmailBody = `Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji}  Vārds: ${req.body.firstName} Uzvārds: ${req.body.lastName} E-pasta adrese: ${req.body.email} Apraksts: ${req.body.description}`;
-  const formattedEmailBodyHTML = `<div style="font-size: 17px; font-family: Times New Roman"><p style="font-size: 14px; color:#504F4F; ">Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji}</p> <p><strong>Vārds</strong>: ${req.body.firstName} </pr> <p><strong>Uzvārds</strong>: ${req.body.lastName} </p><p>  <strong>E-pasta adrese</strong>: ${req.body.email} </p><p>  <strong>Apraksts</strong>: ${req.body.description}</p></div>`;
+  const formattedEmailBody = `Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji} Vārds: ${req.body.firstName} Uzvārds: ${req.body.lastName} E-pasta adrese: ${req.body.email} Tālruņa numurs: ${req.body.phone} Apraksts: ${req.body.description}`;
+  const formattedEmailBodyHTML = `<div style="font-size: 17px; font-family: Times New Roman"><p style="font-size: 14px; color:#504F4F; ">Mājaslapā ienācis jauns pieteikums konsultācijai! ${emoji}</p> <p><strong>Vārds</strong>: ${req.body.firstName} </pr> <p><strong>Uzvārds</strong>: ${req.body.lastName} </p><p>  <strong>E-pasta adrese</strong>: ${req.body.email} </p><p>  <strong>Tālruņa numurs</strong>: ${req.body.phone} </p> <p>  <strong>Apraksts</strong>: ${req.body.description}</p></div>`;
 
   const message = {
     from: process.env.NODEMAILER_SENDER_EMAIL,

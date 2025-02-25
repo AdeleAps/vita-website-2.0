@@ -37,6 +37,7 @@ const EmailForm = (props) => {
         lastName: "",
         email: "",
         description: "",
+        phone: ""
       }}
       validationSchema={Yup.object({
         firstName: Yup.string()
@@ -46,6 +47,7 @@ const EmailForm = (props) => {
           .max(50, "Ne vairāk kā 50 rakstzīmes")
           .required(" "),
         email: Yup.string().email().required(" "),
+        phone: Yup.string().matches(/^\d+$/, " ").required(" "),
         description: Yup.string()
           .max(5000, "Ne vairāk kā 5000 rakstzīmes")
           .required(" "),
@@ -139,6 +141,28 @@ const EmailForm = (props) => {
               E-pasta adrese
             </legend>
           </fieldset>
+          <fieldset
+            className={`${errors.phone && touched.phone && styles.error} ${
+              touched.phone && !errors.phone && styles.touched
+            }`}
+          >
+            <Field
+              {...inputFocusProps}
+              placeholder="Tālruņa numurs"
+              name="phone"
+              type="tel"
+              onBlur={handleBlur}
+              value={values.phone}
+              inputMode="numeric"
+            />
+            <legend
+              className={focus.activeField === "phone" ? styles.active : ""}
+              htmlFor="phone"
+            >
+              Tālruņa numurs
+            </legend>
+          </fieldset>
+
           <fieldset
             className={`${
               errors.description && touched.description && styles.error
