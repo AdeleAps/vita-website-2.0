@@ -14,6 +14,7 @@ User-agent: grapeshot
 User-agent: Barkrowler
 User-agent: ClaudeBot
 User-agent: Claude-Web
+User-agent: FacebookBot
 Disallow: /
 
 User-agent: Slurp
