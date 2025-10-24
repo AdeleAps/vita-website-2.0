@@ -11,7 +11,7 @@ const ContactsPage = (props) => {
           <h2>Kontakti</h2>
           <div className={styles.gridContainer}>
             <div className={styles.gridItem}>Telefons</div>
-            <div className={styles.gridItem}>+371 29659969</div>
+            <div className={styles.gridItem}>+371 29549969</div>
             <div className={styles.gridItem}>E-pasts</div>
             <div className={styles.gridItem}>
               <a href="mailto:vita.psihologs@gmail.com">
